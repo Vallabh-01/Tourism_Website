@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tour and Tickets</title>
+    <link rel="stylesheet" href="index1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .booking-form {
+            background: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .events {
+            background: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="transparent.png" alt="Logo">
+        </div>
+        <div class="navbar-right">
+            <div id="searchBar">
+                <input type="text" placeholder="Search..." >
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <section id="booking" class="booking-form">
+        <h2>Book a Tour</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="tourDate">Date</label>
+                <input type="date" id="tourDate" name="tourDate" required>
+            </div>
+            <div class="form-group">
+                <label for="numTickets">Number of Tickets</label>
+                <input type="number" id="numTickets" name="numTickets" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="tourType">Preferred Tour Type</label>
+                <select id="tourType" name="tourType" required>
+                    <option value="standard">Standard Tour</option>
+                    <option value="premium">Premium Tour</option>
+                    <option value="vip">VIP Tour</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="timeSlot">Preferred Time Slot</label>
+                <select id="timeSlot" name="timeSlot" required>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="place">Place Name</label>
+                <input type="text" id="place" name="place" required>
+            </div>
+            <div class="form-group">
+                <label for="participants">Additional Participants</label>
+                <input type="text" id="participants" name="participants">
+            </div>
+            <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="message">Message to Organizers</label>
+                <textarea id="message" name="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="cta-button">Book Now</button>
+        </form>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="event1.jpg" alt="Event 1">
+                <div class="card-content">
+                    <h3 class="card-title">Event 1</h3>
+                    <p class="card-text">Description of Event 1.</p>
+                    <button class="cta-button">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="event2.jpg" alt="Event 2">
+                <div class="card-content">
+                    <h3 class="card-title">Event 2</h3>
+                    <p class="card-text">Description of Event 2.</p>
+                    <button class="cta-button">Buy Tickets</button>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Book Tour. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"> <i class='bx bxl-meta bx-tada'></i></a>
+            <a href="#"><i class='bx bxl-twitter bx-tada' ></i></a>
+            <a href="#"><i class='bx bxl-instagram bx-tada' ></i></a>
+        </div>
+        <div id="contact" class="content">
+            <h2>Contact Us</h2>
+            <p>Have any questions or suggestions? Feel free to get in touch with us!</p>
+            <p>Email: info@puneadventure.com</p>
+            <p>Phone: +91 1234567890</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

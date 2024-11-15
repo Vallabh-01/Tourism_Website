@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bombay Stock Exchange Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+      width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section id="bse">
+    <div class="container">
+      <img src="Bse.jpeg" alt="Bombay Stock Exchange Building" class="main-image">
+      <div class="content">
+        <h2>Bombay Stock Exchange (BSE)</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>The Bombay Stock Exchange (BSE) is one of the oldest stock exchanges in Asia, located in Mumbai, Maharashtra, India. Established in 1875, it is now the 10th largest stock exchange in the world by market capitalization. The BSE plays a crucial role in the Indian financial market, facilitating trading in equities, derivatives, bonds, and other financial instruments.</p>
+        </div>
+        <div class="info">
+          <h3>Significance:</h3>
+          <p>The BSE serves as a barometer of the Indian economy, reflecting market trends and investor sentiment. It provides a platform for companies to raise capital through public offerings and listings, contributing to economic growth and development. The BSE Sensex and BSE 500 indices are widely followed benchmarks for Indian stock market performance.</p>
+        </div>
+        <div class="info">
+          <h3>Operations:</h3>
+          <p>The BSE operates on a fully automated trading system called BOLT (BSE OnLine Trading). It offers trading in various segments, including equities, equity derivatives, currency derivatives, and debt instruments. The exchange is regulated by the Securities and Exchange Board of India (SEBI), ensuring fair and transparent trading practices.</p>
+        </div>
+        <div class="info">
+          <h3>Indices:</h3>
+          <p>The BSE calculates and publishes several key indices, including:</p>
+          <ul>
+            <li><strong>BSE Sensex:</strong> The benchmark index representing the top 30 stocks listed on the BSE based on market capitalization.</li>
+            <li><strong>BSE 500:</strong> A broad-based index comprising the top 500 listed companies on the BSE in terms of market capitalization.</li>
+            <li><strong>BSE 100:</strong> An index consisting of the top 100 companies listed on the BSE based on market capitalization.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Regulation:</h3>
+          <p>The BSE operates under the regulatory framework of the Securities and Exchange Board of India (SEBI). SEBI regulates the exchange to ensure compliance with securities laws, investor protection, and market integrity. The BSE also adheres to international standards and best practices in stock market regulation.</p>
+        </div>
+        <div class="info">
+          <h3>Investor Information:</h3>
+          <p>Investors can participate in trading on the BSE through registered stockbrokers and authorized trading members. They can access market information, company announcements, and real-time stock quotes through the BSE website, mobile applications, and other financial platforms.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Bombay Stock Exchange is located at Dalal Street, Mumbai, Maharashtra, India.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.83385174053919, 18.930228487895995],  // Coordinates for Bombay Stock Exchange building
+          zoom: 15
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.83385174053919, 18.930228487895995])
+          .addTo(map);
+  </script>
+</body>
+</html> 

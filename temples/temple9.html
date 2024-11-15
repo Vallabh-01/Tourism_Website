@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moreshwar Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="moreshwar-temple">
+    <div class="container">
+      <img src="Moreshwar.jpg" alt="Moreshwar Temple Image" class="main-image">
+      <div class="content">
+        <h2>Moreshwar Temple</h2>
+        <div class="info">
+          <h3>About Moreshwar Temple:</h3>
+          <p>The Moreshwar Temple, also known as the Mayureshwar Temple, is a prominent Hindu temple dedicated to Lord Ganesha. It is located in Morgaon, Maharashtra, India, and is considered the starting point of the Ashtavinayaka pilgrimage. The temple's architecture and spiritual significance attract devotees from far and wide.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The history of the Moreshwar Temple dates back several centuries and is intertwined with local legends and mythology. It is believed that the temple was constructed by the Yadava dynasty ruler Moraya Gosavi. The temple has undergone renovations and expansions over time, maintaining its sacredness and cultural importance.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The Moreshwar Temple features traditional Hindu temple architecture with intricate carvings and sculptures. The main sanctum houses the idol of Lord Ganesha, which is adorned with ornaments and flowers by devotees. The temple complex includes other shrines dedicated to various deities, along with facilities for religious rituals and ceremonies.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting the Moreshwar Temple can participate in various rituals and ceremonies conducted throughout the day. Daily aarti, abhishekam (ritual bathing of the deity), and special poojas are performed to seek the blessings of Lord Ganesha. The temple celebrates major festivals like Ganesh Chaturthi with grandeur and fervor.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to the Moreshwar Temple can savor delicious Maharashtrian cuisine at nearby eateries. Local specialties include vada pav, puran poli, and misal pav. These dishes reflect the rich culinary heritage of the region and are a favorite among pilgrims and tourists alike.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are accommodation options available near the Moreshwar Temple, ranging from budget guesthouses to mid-range hotels. Many of these accommodations provide basic amenities and are conveniently located for pilgrims. Advance booking is advisable, especially during festivals and peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>While visiting the Moreshwar Temple, tourists can explore nearby attractions such as the Chintamani Temple and the Shree Siddhivinayak Ganapati Temple. The region also offers opportunities for nature walks and exploration of historical sites, providing a holistic travel experience for visitors.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Moreshwar Temple is located in Morgaon, Pune district, Maharashtra, India. The temple is well-connected by road and can be reached via public transportation or private vehicles. Morgaon is approximately 64 kilometers away from Pune city, making it accessible for day trips or short pilgrimages.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [74.31749156441755, 18.278189677470344],  // Coordinates for Moreshwar Temple, Morgaon
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([74.31749156441755, 18.278189677470344])
+          .addTo(map);
+  </script>
+</body>
+</html> 

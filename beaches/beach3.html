@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alibaug Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="alibaug-beach">
+    <div class="container">
+      <img src="alibaugh.jpeg" alt="Alibaug Beach Image" class="main-image">
+      <div class="content">
+        <h2>Alibaug Beach</h2>
+        <div class="info">
+          <h3>About Alibaug Beach:</h3>
+          <p>Alibaug Beach is a popular beach located in the coastal town of Alibaug in Maharashtra, India. Known for its sandy shores, gentle waves, and scenic surroundings, Alibaug Beach is a favored destination for beach lovers and day trippers from nearby cities like Mumbai and Pune.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Alibaug Beach offers a variety of attractions and activities for visitors. Apart from swimming and sunbathing, visitors can enjoy water sports such as jet skiing, banana boat rides, and parasailing. The beach also provides stunning views of the Colaba Fort, located just off the coast.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Alibaug Beach that visitors can explore. The Kolaba Fort, also known as the Alibaug Fort, is a historic sea fort located near the beach and is accessible during low tide. The Phansad Wildlife Sanctuary and the Kanakeshwar Forest are also popular attractions in the area.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Alibaug is known for its delicious seafood and local Maharashtrian cuisine. Visitors can savor fresh seafood dishes such as fish curry, prawn masala, and crab fry at the numerous beachside shacks and restaurants. The area is also famous for its traditional Maharashtrian snacks like vada pav and bhaji pav.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Alibaug Beach, ranging from budget guesthouses to luxury resorts. Visitors can choose from beachfront cottages offering stunning views of the Arabian Sea or homestays nestled amidst lush greenery. Advance booking is recommended, especially during weekends and holidays.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Alibaug hosts several festivals and cultural events throughout the year, offering visitors a glimpse into the local culture and traditions. The Koli Seafood Festival, held annually, showcases a variety of seafood dishes and local delicacies, along with cultural performances and music.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Alibaug Beach is located in the Raigad district of Maharashtra, approximately 95 kilometers from Mumbai. The beach is easily accessible by road and is well-connected to major cities and towns in Maharashtra. Visitors can reach Alibaug Beach via private vehicles or state transport buses.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.87111448024035, 18.639204573673652],  // Coordinates for Alibaug Beach, Maharashtra
+          zoom: 15
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.87111448024035, 18.639204573673652])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

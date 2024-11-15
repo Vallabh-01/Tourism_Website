@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elephanta Caves Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="elephanta-caves">
+    <div class="container">
+      <img src="Elephanta Caves by Speedboat Tour.jpeg" alt="Elephanta Caves Image" class="main-image">
+      <div class="content">
+        <h2>Elephanta Caves</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>The Elephanta Caves, located on Elephanta Island near Mumbai, are renowned for their rock-cut sculptures and artistic marvels. These UNESCO World Heritage sites are famous for their intricate carvings and statues dedicated primarily to the Hindu god Shiva. The caves, believed to date back to the 5th to 7th centuries, showcase a fusion of Hindu and Buddhist artistic styles. The most notable sculpture is the Trimurti, a three-headed depiction of Shiva, which is considered a masterpiece of Indian art.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Elephanta Caves can enjoy a variety of activities that offer a glimpse into India's rich cultural heritage. Guided tours are available to provide historical context and detailed explanations of the sculptures and carvings. Photography is a popular activity, capturing the stunning art and scenic views of the island. Hiking around Elephanta Island allows visitors to explore the natural beauty and archaeological sites. Additionally, boat rides to and from the island offer a unique perspective of Mumbai's coastline.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>In addition to the Elephanta Caves, there are several attractions worth visiting in the vicinity. Gateway of India, a historic monument in Mumbai, is the departure point for ferries to Elephanta Island. Chhatrapati Shivaji Maharaj Vastu Sangrahalaya (formerly the Prince of Wales Museum) houses a vast collection of art, artifacts, and historical objects. Marine Drive, known as the Queen's Necklace, offers a scenic promenade along the Mumbai coast. Colaba Causeway, a bustling market street, is ideal for shopping and dining experiences.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Elephanta Caves:</h3>
+          <p>Reaching Elephanta Caves involves a combination of land and sea travel. Visitors typically start from Mumbai, taking a ferry from the Gateway of India to Elephanta Island. The ferry ride takes about an hour and provides scenic views of Mumbai's skyline and harbor. Mumbai is well-connected by air, rail, and road, making it easily accessible from various parts of India and the world. Local transport options, such as taxis and buses, can be used to reach the Gateway of India from different parts of Mumbai.</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>The Elephanta Caves hold great historical and religious significance. The island was originally known as Gharapuri and served as an important Hindu and Buddhist religious center. The caves' sculptures, especially those depicting various forms of Shiva, provide insights into the religious and cultural practices of ancient India. The Portuguese named the island Elephanta after discovering a large stone elephant near the shore, which is now preserved in the Dr. Bhau Daji Lad Museum in Mumbai.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Besides the Elephanta Caves, visitors can explore other attractions in Mumbai. The Gateway of India, an iconic symbol of Mumbai, is the starting point for the ferry to Elephanta Island. The Chhatrapati Shivaji Maharaj Terminus, a UNESCO World Heritage site, is an architectural marvel. Visitors can also explore the bustling markets of Mumbai, such as Crawford Market and Chor Bazaar, to experience the local culture and cuisine.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>Mumbai, the city closest to Elephanta Island, is known for its vibrant and diverse culture. The city is a melting pot of different communities and traditions. Visitors can experience the local Maharashtrian culture through its festivals, cuisine, and traditional music and dance. Mumbai is also known for its street food, with popular dishes like vada pav, pav bhaji, and bhel puri. The city's cultural festivals, such as Ganesh Chaturthi and Diwali, offer a glimpse into the local traditions and celebrations.</p>
+        </div>
+        <div class="info">
+          <h3>Tips for Visitors:</h3>
+          <p>When visiting Elephanta Caves, it's advisable to wear comfortable clothing and footwear, as exploring the caves involves walking and climbing. Carry water and snacks, as there are limited options on the island. Hiring a guide can enhance the experience by providing detailed information about the history and significance of the caves. It's important to respect the cultural and historical heritage of the site by not touching or damaging the sculptures. Lastly, check the ferry schedules in advance to plan your visit accordingly.</p>
+        </div>
+        <div class="info">
+            <h3>Location</h3>
+            <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.93242527437631, 18.961619375852475],  // Coordinates for Elephanta Caves
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.93242527437631, 18.961619375852475])
+          .addTo(map);
+  </script>
+</body>
+</html> 

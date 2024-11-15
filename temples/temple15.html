@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekvira Mandir</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="ekvira-mandir">
+    <div class="container">
+      <img src="ekvira.jpg" alt="Ekvira Mandir Image" class="main-image">
+      <div class="content">
+        <h2>Ekvira Mandir</h2>
+        <div class="info">
+          <h3>About Ekvira Mandir:</h3>
+          <p>Ekvira Mandir, situated near Lonavala in Maharashtra, is a revered Hindu temple dedicated to the goddess Ekvira Devi. The temple is perched on a hill and attracts devotees and tourists alike due to its spiritual significance and scenic location.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Ekvira temple has ancient roots and is believed to have been built during the reign of the Pandavas. It is a significant pilgrimage site for the Koli community, who consider Ekvira Devi as their deity. The temple's history is intertwined with local folklore and traditions.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The temple's architecture is a blend of traditional and rock-cut styles. It is situated amidst the Karla Caves, which are ancient Buddhist rock-cut caves dating back to the 2nd century BCE. The temple complex provides a serene and picturesque environment for worship and reflection.</p>
+        </div>
+        <div class="info">
+          <h3>Religious Significance:</h3>
+          <p>Ekvira Devi is considered a powerful deity, and devotees believe that she grants their wishes and provides protection. The temple is especially crowded during the Chaitra Navratri and Ashwin Navratri festivals, when special prayers and rituals are performed.</p>
+        </div>
+        <div class="info">
+          <h3>Festivals:</h3>
+          <p>The major festivals celebrated at Ekvira Mandir include Navratri and Chaitra Purnima. During these festivals, the temple is adorned with decorations, and thousands of devotees visit to seek blessings. The celebrations are marked by traditional music, dance, and special ceremonies.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Ekvira Mandir can enjoy local Maharashtrian cuisine at nearby food stalls and eateries. Popular dishes include vada pav, misal pav, and bhakri with pithla. There are also several stalls selling fresh fruits and traditional sweets.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are various accommodation options available near Ekvira Mandir, ranging from budget lodges to comfortable hotels. Many visitors also choose to stay in Lonavala, which offers a wider range of accommodation and is only a short drive from the temple.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>In addition to the Ekvira Mandir, visitors can explore nearby attractions such as the Karla Caves, which are known for their intricate carvings and historical significance. The hill stations of Lonavala and Khandala, famous for their scenic beauty and pleasant weather, are also close by.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Ekvira Mandir is located near the Karla Caves in the Pune district of Maharashtra, approximately 12 kilometers from Lonavala. The temple is accessible by road, and visitors can reach it via private vehicles, taxis, or state transport buses from Lonavala. The nearest railway station is Lonavala, and the nearest airport is Pune International Airport.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.47024926848368, 18.78328988384937],  // Coordinates for Ekvira Mandir, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.47024926848368, 18.78328988384937])
+          .addTo(map);
+  </script>
+</body>
+</html>

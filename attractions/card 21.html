@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aga Khan Palace Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="aga-khan-palace">
+    <div class="container">
+      <img src="aga khan.jpeg" alt="Aga Khan Palace Image" class="main-image">
+      <div class="content">
+        <h2>Aga Khan Palace</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>The Aga Khan Palace, located in Pune, Maharashtra, is a historically significant building constructed in 1892 by Sultan Muhammed Shah Aga Khan III. The palace is renowned for its architectural beauty and historical importance, particularly its association with the Indian freedom movement. It served as a prison for Mahatma Gandhi, his wife Kasturba Gandhi, and his secretary Mahadev Desai following the launch of the Quit India Movement in 1942.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>The Aga Khan Palace offers several attractions for visitors:</p>
+          <ul>
+            <li><strong>Gandhi Memorial:</strong> The palace houses a memorial dedicated to Mahatma Gandhi, featuring photographs and personal items related to his life and the freedom struggle.</li>
+            <li><strong>Samadhis:</strong> The samadhis (memorials) of Kasturba Gandhi and Mahadev Desai are located within the palace grounds, marking the place where they were cremated.</li>
+            <li><strong>Architecture:</strong> The palace is a stunning example of Indo-Islamic architecture, with its beautifully landscaped gardens and spacious halls.</li>
+            <li><strong>Exhibits:</strong> The palace features various exhibits showcasing artifacts, documents, and photographs from the period of Gandhi's imprisonment and the broader freedom movement.</li>
+            <li><strong>Peaceful Gardens:</strong> The well-maintained gardens provide a serene environment for visitors to relax and reflect on the historical significance of the site.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to the Aga Khan Palace can explore the museum and exhibits, learn about the history of the Indian independence movement, and pay respects at the samadhis of Kasturba Gandhi and Mahadev Desai. The tranquil gardens are perfect for leisurely walks and photography.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit the Aga Khan Palace is from October to March when the weather is pleasant and suitable for outdoor activities. The summer months (April to June) can be quite hot, while the monsoon season (July to September) brings moderate to heavy rainfall.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>The Aga Khan Palace is well-connected by road and rail. The nearest railway station is Pune Junction, located about 5 kilometers away. Pune is well-connected to major cities like Mumbai, Delhi, and Bangalore by regular train services. The nearest airport is Pune International Airport, approximately 7 kilometers away. Visitors can hire taxis, use public transportation, or drive to reach the palace.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Pune offers a wide range of accommodation options, including hotels, guesthouses, and serviced apartments. Visitors can choose from various lodging options based on their preferences and budget. Advance booking is recommended, especially during peak tourist seasons and around significant local festivals.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.90180917709927, 18.552575731166783],  // Coordinates for Aga Khan Palace, Pune
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.90180917709927, 18.552575731166783])
+          .addTo(map);
+  </script>
+</body>
+</html>

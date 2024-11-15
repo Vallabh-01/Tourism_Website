@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnala Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Karnala Fort</h1>
+        <img src="Karnala.jpeg" alt="Karnala Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Karnala Fort is famous for its strategic location and the Karnala Bird Sanctuary. The fort offers a blend of historical significance and natural beauty, making it a popular destination for history enthusiasts and nature lovers.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Karnala Fort can enjoy trekking, bird watching, and exploring the historic ruins. The fort's trails offer a moderate trekking experience suitable for both beginners and experienced trekkers. Bird watchers can spot a variety of avian species in the Karnala Bird Sanctuary.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Within the Karnala Fort complex, notable attractions include the fort's two bastions, the water cisterns, and the stunning views from the top. The Karnala Bird Sanctuary, which surrounds the fort, is home to over 150 species of resident and migratory birds.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Karnala Fort is located in the Raigad district of Maharashtra, approximately 60 kilometers from Mumbai and 12 kilometers from Panvel. The fort is accessible by road, and the nearest railway station is Panvel. From Panvel, one can take a bus or taxi to the base of the fort, followed by a trek to the top.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Karnala Fort is during the winter months from November to February when the weather is cool and pleasant. The monsoon season (June to September) also provides a lush green backdrop, but the trails can be slippery and challenging.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is an entry fee to enter the Karnala Bird Sanctuary, which also covers access to the fort. The fees may vary for Indian and foreign tourists. It is advisable to check the current entry fee and timings before planning your visit.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Accommodation options near Karnala Fort are limited. Visitors can find basic lodging facilities in nearby towns such as Panvel. For more comfortable accommodations, it is recommended to stay in Mumbai or Navi Mumbai, which offer a wide range of hotels and guesthouses to suit different budgets and preferences.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.11839167115386, 18.88168919133382],
+            zoom: 14.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.11839167115386, 18.88168919133382])
+            .addTo(map);
+    </script>
+
+</body>
+</html> 

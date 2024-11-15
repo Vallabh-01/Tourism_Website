@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhandardara Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="bhandardara">
+    <div class="container">
+      <img src="Bhandardara.jpeg" alt="Bhandardara Image" class="main-image">
+      <div class="content">
+        <h2>Bhandardara</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Bhandardara is a beautiful holiday resort village situated in the Ahmednagar district of Maharashtra, India. Nestled in the Sahyadri mountain range, it is known for its scenic landscapes, lush greenery, and tranquil atmosphere. The village is located at an altitude of around 750 meters above sea level and offers a perfect getaway for nature lovers and adventure enthusiasts.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Bhandardara is home to several natural and man-made attractions:</p>
+          <ul>
+            <li><strong>Athur Lake:</strong> A serene lake formed by the backwaters of the Wilson Dam, ideal for boating and picnics.</li>
+            <li><strong>Randha Falls:</strong> A spectacular waterfall cascading from a height of 170 feet, best visited during the monsoon season.</li>
+            <li><strong>Wilson Dam:</strong> One of the oldest dams in India, built on the Pravara River, offering beautiful views and a peaceful environment.</li>
+            <li><strong>Mount Kalsubai:</strong> The highest peak in Maharashtra, popular for trekking and providing panoramic views of the surrounding region.</li>
+            <li><strong>Amruteshwar Temple:</strong> An ancient Shiva temple known for its Hemadpanti style of architecture.</li>
+            <li><strong>Ratangad Fort:</strong> A historic fort that offers trekking opportunities and stunning views of the Sahyadri ranges.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Bhandardara can engage in various activities such as boating, trekking, camping, and fishing. The tranquil surroundings and scenic beauty make it an ideal destination for photography, nature walks, and stargazing.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Bhandardara is from October to May. During this period, the weather is pleasant and suitable for outdoor activities. The monsoon season (June to September) transforms the region into a lush green paradise with numerous waterfalls, but it can also make trekking and other activities challenging.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Bhandardara is well-connected by road and rail. The nearest railway station is Igatpuri, located about 45 kilometers away. From Igatpuri, visitors can hire taxis or take buses to reach Bhandardara. The village is approximately 185 kilometers from Mumbai and 162 kilometers from Pune, making it accessible by car or bus.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Bhandardara offers a range of accommodation options, including resorts, hotels, and guesthouses. Visitors can choose from various lodging options based on their preferences and budget. Advance booking is recommended, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.7669977279369, 19.535914245624475],  // Coordinates for Bhandardara, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.7669977279369, 19.535914245624475])
+          .addTo(map);
+  </script>
+</body>
+</html> 

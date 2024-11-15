@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harishchandragad Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+        <div class="container">
+            <h1>Harishchandragad Fort</h1>
+            <img src="Harishchandragad.jpeg" alt="Harishchandragad Fort">
+            <div class="info">
+                <h2>Famous For:</h2>
+                <p>Harishchandragad Fort is famous for its ancient caves, temples, and rugged beauty. It is a prominent hill fort in the Ahmednagar district of Maharashtra, known for its historical and mythological significance, and challenging trekking trails.</p>
+            </div>
+            <div class="info">
+                <h2>Activities to Do:</h2>
+                <p>Visitors to Harishchandragad Fort can enjoy trekking, exploring ancient caves and temples, camping, and witnessing stunning sunsets and sunrises from the top. The trek to Harishchandragad is popular among adventure enthusiasts and offers breathtaking views of the surrounding landscape.</p>
+            </div>
+            <div class="info">
+                <h2>Famous Places to Visit:</h2>
+                <p>Notable attractions within Harishchandragad Fort include the ancient Kedareshwar Cave Temple, the Konkan Kada cliff offering panoramic views, the Taramati peak which is the highest point on the fort, and various rock-cut caves that are significant both historically and religiously.</p>
+            </div>
+            <div class="info">
+                <h2>How to Reach:</h2>
+                <p>Harishchandragad Fort can be accessed via multiple trekking routes, the most popular being from the villages of Pachnai, Khireshwar, and Nalichi Vaat. The nearest town is Malshej Ghat, and the closest railway station is Kalyan. From there, local transport or private vehicles can be used to reach the base villages.</p>
+            </div>
+            <div class="info">
+                <h2>Best Time to Visit:</h2>
+                <p>The best time to visit Harishchandragad Fort is during the post-monsoon season from October to February when the weather is cool and the surroundings are lush green. The monsoon season (June to September) is also popular but can be challenging due to slippery trails and heavy rainfall.</p>
+            </div>
+            <div class="info">
+                <h2>Entry Fee:</h2>
+                <p>There is no official entry fee to visit Harishchandragad Fort. However, trekkers might need to pay for parking and camping sites managed by local authorities or private operators. It is advisable to carry sufficient water, food, and other essentials as there are limited facilities available on the fort.</p>
+            </div>
+            <div class="info">
+                <h2>Accommodation:</h2>
+                <p>Accommodation options at Harishchandragad Fort include basic camping facilities near the caves and temple areas. Trekkers can also find homestay options in the base villages like Pachnai and Khireshwar. It is recommended to carry your own camping gear if planning to stay overnight.</p>
+            </div>
+            <div class="info">
+                <h2>Location</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <!-- Mapbox JS -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [73.77717141655265, 19.387949275510877],
+                zoom: 12.7
+            });
+    
+            var marker = new mapboxgl.Marker()
+                .setLngLat([73.77717141655265, 19.387949275510877])
+                .addTo(map);
+        </script>
+</body>
+</html>

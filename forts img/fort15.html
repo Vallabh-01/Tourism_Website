@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panhala Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Panhala Fort</h1>
+        <img src="panhala.jpeg" alt="Panhala Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Panhala Fort is famous for its rich history, architectural marvels, and its significant role in Maratha history. It is one of the largest forts in Maharashtra and has witnessed numerous historical events, including the escape of Chhatrapati Shivaji Maharaj from the siege of Siddi Johar.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Panhala Fort can explore the historical monuments, enjoy panoramic views of the Western Ghats, and take part in guided tours that narrate the fort's fascinating history. Trekking and nature walks around the fort are also popular activities.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some notable attractions within Panhala Fort include the Sajja Kothi, where Shivaji Maharaj was kept under house arrest, the Andhar Bavadi (a hidden well), the Ambarkhana granary, and the Teen Darwaza (Three Gates). The fort also has several temples and lookout points offering stunning views.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Panhala Fort is located near the city of Kolhapur in Maharashtra. It can be reached by road from Kolhapur, which is well-connected by road and rail to major cities. The nearest airport is Kolhapur Airport, about 25 kilometers away. From Kolhapur, local buses and taxis are available to reach Panhala.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Panhala Fort is during the winter months from November to February when the weather is cool and pleasant. The monsoon season (June to September) also offers a unique experience with lush greenery and misty surroundings, but the trails can be slippery.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no official entry fee to visit Panhala Fort. However, some of the attractions within the fort premises might have nominal charges. It is advisable to check for any recent updates on entry fees and timings before planning your visit.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>There are several accommodation options available in and around Panhala, ranging from budget guesthouses to mid-range hotels and resorts. Kolhapur, being a larger city, offers a wider range of accommodations to suit different preferences and budgets.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [74.10868794911545, 16.81022025140663],
+            zoom: 12.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([74.10868794911545, 16.81022025140663])
+            .addTo(map);
+    </script>
+</body>
+</html>

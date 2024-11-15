@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murud Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="murud-beach">
+    <div class="container">
+      <img src="Murud.jpeg" alt="Murud Beach Image" class="main-image">
+      <div class="content">
+        <h2>Murud Beach</h2>
+        <div class="info">
+          <h3>About Murud Beach:</h3>
+          <p>Murud Beach is a charming coastal destination located in the Raigad district of Maharashtra, India. Known for its golden sands, gentle waves, and scenic beauty, Murud Beach attracts visitors seeking a peaceful retreat amidst nature.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Murud Beach offers visitors the perfect setting for relaxation and leisure activities. The beach is ideal for swimming, sunbathing, and beachcombing. Visitors can also enjoy boat rides and water sports such as banana boat rides and parasailing.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Murud Beach that visitors can explore. The historic Murud Janjira Fort, situated on an island just off the coast, is a major landmark and can be accessed by boat. The pristine Kashid Beach and Korlai Fort are also popular tourist spots.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Murud is known for its delicious seafood delicacies. Visitors can sample a variety of fresh seafood dishes at the beachside shacks and restaurants lining the coastline. From fish thalis to crab curry, there are plenty of options to satisfy your taste buds.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Murud Beach, ranging from budget guesthouses to beach resorts. Visitors can choose from beachfront cottages offering stunning views of the Arabian Sea or cozy homestays nestled amidst greenery.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Murud celebrates various festivals and cultural events throughout the year. The Ganesh Chaturthi festival is a major event celebrated with great fervor, featuring colorful processions, traditional music, and cultural performances. Visitors can immerse themselves in the festive atmosphere and witness the local customs and traditions.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Murud Beach is located in the Raigad district of Maharashtra, approximately 150 kilometers from Mumbai. The beach is easily accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Murud Beach via public transportation such as buses or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.95355598653929, 18.329775609325594],  // Coordinates for Murud Beach, Maharashtra
+          zoom: 13
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.95355598653929, 18.329775609325594])
+          .addTo(map);
+  </script>
+</body>
+</html> 

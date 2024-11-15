@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saptashrungi Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="saptashrungi-temple">
+    <div class="container">
+      <img src="saptashrungi.jpg" alt="Saptashrungi Temple Image" class="main-image">
+      <div class="content">
+        <h2>Saptashrungi Temple</h2>
+        <div class="info">
+          <h3>About Saptashrungi Temple:</h3>
+          <p>Saptashrungi Temple is a revered Hindu shrine located near Vani in the Nashik district of Maharashtra, India. It is dedicated to Goddess Saptashrungi Nivasini, an incarnation of the goddess Durga. The temple is situated on a hill and offers breathtaking views of the surrounding landscape.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Saptashrungi Temple has a rich history and is considered one of the Shakti Peethas, where parts of the goddess Sati are believed to have fallen. The temple is a significant pilgrimage site and is mentioned in various ancient texts and scriptures. Devotees from all over India visit the temple to seek blessings and pay their respects.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The temple's architecture is a blend of traditional and regional styles. It features intricate carvings and sculptures depicting various forms of the goddess and other deities. The climb to the temple involves ascending a series of steps, which are lined with shops selling religious items and souvenirs.</p>
+        </div>
+        <div class="info">
+          <h3>Religious Significance:</h3>
+          <p>Goddess Saptashrungi is believed to fulfill the wishes of her devotees and protect them from harm. The temple is particularly crowded during the Navratri festival, when special prayers and rituals are performed. Pilgrims often undertake the challenging climb to the temple as an act of devotion.</p>
+        </div>
+        <div class="info">
+          <h3>Festivals:</h3>
+          <p>The major festivals celebrated at Saptashrungi Temple include Navratri and Chaitra Purnima. During these festivals, the temple is adorned with decorations, and special ceremonies are held. Thousands of devotees visit the temple to participate in the celebrations and seek the blessings of the goddess.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Saptashrungi Temple can enjoy local Maharashtrian cuisine at nearby food stalls and eateries. Popular dishes include vada pav, misal pav, and puran poli. There are also several shops selling traditional sweets and snacks.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are various accommodation options available near Saptashrungi Temple, ranging from budget lodges to comfortable hotels. Many visitors also choose to stay in Nashik, which offers a wider range of accommodation and is well-connected to the temple.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>In addition to the Saptashrungi Temple, visitors can explore nearby attractions such as the Vani Caves, which are known for their historical significance and beautiful carvings. The city of Nashik, with its rich cultural heritage and famous vineyards, is also worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Saptashrungi Temple is located near Vani in the Nashik district of Maharashtra, approximately 60 kilometers from Nashik city. The temple is accessible by road, and visitors can reach it via private vehicles, taxis, or state transport buses from Nashik. The nearest railway station is Nashik Road, and the nearest airport is Nashik Airport.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.90683277123028, 20.39150170526155],  // Coordinates for Saptashrungi Temple, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.90683277123028, 20.39150170526155])
+          .addTo(map);
+  </script>
+</body>
+</html> 

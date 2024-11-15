@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganpatipule Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="ganpatipule-beach">
+    <div class="container">
+      <img src="ganpatipule.jpeg" alt="Ganpatipule Beach Image" class="main-image">
+      <div class="content">
+        <h2>Ganpatipule Beach</h2>
+        <div class="info">
+          <h3>About Ganpatipule Beach:</h3>
+          <p>Ganpatipule Beach is a pristine beach located along the Konkan coast in Maharashtra, India. Nestled amidst scenic surroundings and lush greenery, Ganpatipule Beach is renowned for its golden sands, clear waters, and tranquil ambiance, making it a popular destination for relaxation and rejuvenation.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Ganpatipule Beach offers a range of attractions and activities for visitors. Besides relaxing on the beach and soaking in the sun, visitors can indulge in water sports such as swimming, banana boat rides, and parasailing. The beach is also home to the revered Swayambhu Ganpati Temple, a major pilgrimage site.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Ganpatipule Beach that visitors can explore. The Prachin Konkan Museum showcases the rich cultural heritage of the Konkan region through its exhibits and artifacts. The Jaigad Fort offers panoramic views of the Arabian Sea and is a popular spot for history enthusiasts.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Ganpatipule Beach is known for its delicious seafood and local cuisine. Visitors can enjoy fresh seafood delicacies such as fish curry, prawn masala, and fried fish prepared in traditional Malvani style. There are also numerous beachside shacks and restaurants serving a variety of vegetarian and non-vegetarian dishes.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Ganpatipule Beach, ranging from budget guesthouses to luxury resorts. Visitors can choose from beachfront resorts offering stunning views of the Arabian Sea or homestays nestled amidst lush greenery. Advance booking is recommended, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Ganpatipule hosts several festivals and cultural events throughout the year, attracting tourists and devotees from far and wide. The Ganesh Chaturthi festival, celebrating the birth of Lord Ganesha, is a major event celebrated with great pomp and fervor. Visitors can witness colorful processions, traditional music, and cultural performances during this festival.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Ganpatipule Beach is located in the Ratnagiri district of Maharashtra, approximately 375 kilometers from Mumbai. The beach is easily accessible by road and is well-connected to major cities and towns in Maharashtra. Visitors can reach Ganpatipule Beach via private vehicles or state transport buses.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.26537327707888, 17.14654889118454],  // Coordinates for Ganpatipule Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.26537327707888, 17.14654889118454])
+          .addTo(map);
+  </script>
+</body>
+</html>

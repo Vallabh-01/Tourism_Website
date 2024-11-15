@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashid Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="kashid-beach">
+    <div class="container">
+      <img src="kashid.jpg" alt="Kashid Beach Image" class="main-image">
+      <div class="content">
+        <h2>Kashid Beach</h2>
+        <div class="info">
+          <h3>About Kashid Beach:</h3>
+          <p>Kashid Beach is a serene and picturesque beach located on the Konkan coast in Maharashtra, India. With its pristine shoreline, clear blue waters, and tranquil ambiance, Kashid Beach is a popular getaway for those seeking relaxation and adventure amidst natural beauty.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Kashid Beach offers a range of attractions and activities for visitors. Besides swimming and sunbathing on the soft white sands, visitors can enjoy water sports such as jet skiing, parasailing, and banana boat rides. The beach also offers stunning views of the sunset, making it an ideal spot for evening walks.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Kashid Beach that visitors can explore. The nearby Phansad Wildlife Sanctuary is home to diverse flora and fauna, offering opportunities for nature walks and birdwatching. The historic Murud-Janjira Fort, located offshore, is another popular attraction worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Kashid Beach is known for its delicious seafood and local cuisine. Visitors can savor fresh seafood delicacies such as fish thali, prawn curry, and crab masala at beachside shacks and restaurants. The area is also famous for its Malvani cuisine, known for its spicy and flavorful dishes.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Kashid Beach, ranging from beachfront resorts to budget guesthouses. Visitors can choose from cozy cottages, luxury villas, or beachside tents for their stay. Advance booking is recommended, especially during weekends and holidays.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Kashid hosts several festivals and cultural events throughout the year, offering visitors a glimpse into local traditions and customs. The Kite Festival, held during Makar Sankranti, is a popular event where visitors can witness colorful kites flying high in the sky.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Kashid Beach is located in the Raigad district of Maharashtra, approximately 135 kilometers from Mumbai. The beach is easily accessible by road and is well-connected to major cities and towns in Maharashtra. Visitors can reach Kashid Beach via private vehicles or state transport buses.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.9021233456125, 18.44784887885821],  // Coordinates for Kashid Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.9021233456125, 18.44784887885821])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

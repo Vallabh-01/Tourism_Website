@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juhu Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="juhu-beach">
+    <div class="container">
+      <img src="juhu.jpeg" alt="Juhu Beach Image" class="main-image">
+      <div class="content">
+        <h2>Juhu Beach</h2>
+        <div class="info">
+          <h3>About Juhu Beach:</h3>
+          <p>Juhu Beach is one of the most famous and largest beaches in Mumbai, Maharashtra, India. Stretching along the Arabian Sea coast, Juhu Beach is renowned for its golden sands, serene atmosphere, and vibrant food stalls, making it a popular destination for locals and tourists alike.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Juhu Beach offers a range of attractions and activities for visitors. Besides relaxing on the beach and enjoying the sunset, visitors can indulge in horse and camel rides, beach volleyball, and various water sports activities. The beach also hosts cultural events and concerts during weekends.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Juhu Beach that visitors can explore. The iconic Prithvi Theatre, a renowned cultural landmark, is located nearby and hosts regular performances and plays. ISKCON Temple, dedicated to Lord Krishna, is another popular attraction in the vicinity.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Juhu Beach is famous for its delicious street food and local snacks. Visitors can savor a variety of Mumbai's street food delights such as bhel puri, pav bhaji, and vada pav at the numerous food stalls and eateries lining the beachfront. Fresh coconut water and ice creams are also popular choices.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Juhu Beach, ranging from luxury hotels to budget guesthouses. Visitors can choose from beachfront hotels offering stunning views of the Arabian Sea or boutique hotels nestled amidst lush greenery. Advance booking is recommended, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Juhu Beach hosts various festivals and events throughout the year, reflecting the vibrant culture of Mumbai. Ganesh Chaturthi, Navratri, and Holi are celebrated with great fervor, featuring processions, music, and dance performances. The beach also attracts crowds during New Year's Eve celebrations.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Juhu Beach is located in the western suburbs of Mumbai, Maharashtra. The beach is easily accessible by road and is well-connected to other parts of the city. Visitors can reach Juhu Beach via public transportation such as buses, taxis, or local trains.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.82441035236485 , 19.1036546731822],  // Coordinates for Juhu Beach, Mumbai
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.82441035236485 , 19.1036546731822])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

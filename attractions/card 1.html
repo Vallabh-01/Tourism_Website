@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonavala Information</title>
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+    <section id="lonavala">
+        <div class="container">
+            <img src="Lonavala.jpeg" alt="Lonavala Image" class="main-image">
+            <div class="content">
+                <h2>Lonavala</h2>
+                <div class="info">
+                    <h3>Famous For:</h3>
+                    <p>Lonavala is renowned for its picturesque landscapes, lush green valleys, and mist-covered hills. This scenic hill station in Maharashtra is especially famous for its delightful chikki (a traditional Indian sweet made from jaggery and nuts) and pleasant weather, making it a popular getaway from the bustling cities of Mumbai and Pune.</p>
+                </div>
+                <div class="info">
+                    <h3>Activities to Do:</h3>
+                    <p>Visitors to Lonavala can engage in a variety of activities that cater to different interests. Adventure enthusiasts can enjoy trekking and hiking on the numerous trails leading to forts and viewpoints, while nature lovers can revel in the beauty of waterfalls, lakes, and caves. During the monsoon season, Lonavala becomes a haven for those seeking to experience the magic of lush greenery and cascading waterfalls. Other activities include paragliding, camping, and leisurely walks through the serene landscapes.</p>
+                </div>
+                <div class="info">
+                    <h3>Famous Places to Visit:</h3>
+                    <p>Lonavala is home to several attractions that draw tourists year-round. The Bhushi Dam, known for its overflowing water during the monsoons, is a popular spot for tourists. The Karla and Bhaja Caves, ancient rock-cut Buddhist shrines, offer a glimpse into the region’s historical significance. The Rajmachi Point provides breathtaking views of the surrounding valleys and forts, while the Lonavala Lake is perfect for a peaceful outing. Other notable places include Tiger’s Leap, a cliff-top with panoramic views, and the Duke’s Nose, a famous viewpoint named for its resemblance to the Duke of Wellington’s nose.</p>
+                </div>
+                <div class="info">
+                    <h3>How to Reach Lonavala:</h3>
+                    <p>Reaching Lonavala is convenient due to its well-connected transportation network. By road, it is easily accessible via the Mumbai-Pune Expressway, making it a favorite weekend destination for people from both cities. Regular buses and private cabs are also available from Mumbai and Pune. For those preferring rail travel, Lonavala has its own railway station, which is a part of the Mumbai-Pune railway line, and numerous trains stop here. The nearest airports are in Mumbai and Pune, both of which are approximately 90 kilometers away, offering domestic and international flights.</p>
+                </div>
+                <div class="info">
+                    <h3>Location</h3>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.405055, 18.746054], // Coordinates for Lonavala
+            zoom: 12.5
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.405055, 18.746054])
+            .addTo(map);
+    </script>
+</body>
+
+</html>

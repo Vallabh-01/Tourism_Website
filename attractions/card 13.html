@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khandala Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="khandala">
+    <div class="container">
+      <img src="Khandala.jpeg" alt="Khandala Image" class="main-image">
+      <div class="content">
+        <h2>Khandala</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Khandala is a picturesque hill station located in the Western Ghats of Maharashtra, India. It is situated at an altitude of 550 meters above sea level and is known for its breathtaking landscapes, lush greenery, and pleasant climate. Khandala, along with its twin hill station Lonavala, is a popular weekend getaway for residents of Mumbai and Pune.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Khandala offers several attractions for nature lovers and adventure enthusiasts. Some of the notable places to visit include:</p>
+          <ul>
+            <li><strong>Lion's Point:</strong> A scenic viewpoint offering panoramic views of the valley and surrounding hills.</li>
+            <li><strong>Duke's Nose:</strong> A cliff named after Duke Wellington, popular for trekking and rock climbing.</li>
+            <li><strong>Bhushi Lake:</strong> A serene lake ideal for picnics and enjoying the tranquility of nature.</li>
+            <li><strong>Rajmachi Fort:</strong> An ancient fort located near Khandala, known for its historical significance and trekking trails.</li>
+            <li><strong>Amrutanjan Point:</strong> Another popular viewpoint that offers stunning views of the valley and the Mumbai-Pune Expressway.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Khandala can engage in various activities such as trekking, hiking, sightseeing, and nature walks. The hill station's serene environment and pleasant weather make it an ideal destination for outdoor activities and relaxation.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Khandala is during the monsoon season (June to September) when the region is lush green and the waterfalls are in full flow. The winter months (October to February) are also a good time to visit, with cool and pleasant weather suitable for sightseeing and outdoor activities.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Khandala is well-connected by road and rail. It is located about 80 kilometers from Mumbai and 70 kilometers from Pune. The nearest railway station is Lonavala, which is well-connected to major cities in Maharashtra. Visitors can also reach Khandala by bus, taxi, or private vehicles via the Mumbai-Pune Expressway.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Khandala offers a range of accommodation options, including luxury resorts, hotels, and budget guesthouses. Visitors can choose from various lodging options based on their preferences and budget.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.37556726266075, 18.759204626371595],  // Coordinates for Khandala, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.37556726266075, 18.759204626371595])
+          .addTo(map);
+  </script>
+</body>
+</html> 

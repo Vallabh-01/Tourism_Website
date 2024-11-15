@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuljabhavani Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="tuljabhavani-temple">
+    <div class="container">
+      <img src="Tulja Bhavani.jpg" alt="Tuljabhavani Temple Image" class="main-image">
+      <div class="content">
+        <h2>Tuljabhavani Temple</h2>
+        <div class="info">
+          <h3>About Tuljabhavani Temple:</h3>
+          <p>Tuljabhavani Temple, located in Tuljapur in the Osmanabad district of Maharashtra, is a revered Hindu shrine dedicated to Goddess Bhavani. The temple is one of the 51 Shakti Peethas and is a significant pilgrimage site, attracting devotees from all over India.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Tuljabhavani Temple has a rich history dating back to the 12th century. It is believed to have been built during the reign of the Yadava dynasty. The temple has been an important center of worship for centuries and holds a special place in the hearts of devotees. The goddess Bhavani is considered the family deity of many Maratha families, including the legendary warrior king Chhatrapati Shivaji Maharaj.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The architecture of Tuljabhavani Temple is an excellent example of the Hemadpanthi style, characterized by its stone construction and intricate carvings. The temple complex includes the main sanctum, several smaller shrines, and various mandaps (halls) where rituals and ceremonies are conducted. The idol of Goddess Bhavani is beautifully adorned and worshipped with great devotion.</p>
+        </div>
+        <div class="info">
+          <h3>Religious Significance:</h3>
+          <p>Goddess Tuljabhavani is revered as a powerful deity who grants boons and protection to her devotees. The temple is particularly crowded during the Navratri festival, when special prayers and rituals are performed. Pilgrims undertake the journey to the temple to seek blessings and fulfill their vows.</p>
+        </div>
+        <div class="info">
+          <h3>Festivals:</h3>
+          <p>The major festivals celebrated at Tuljabhavani Temple include Navratri, Chaitra Navratra, and Kojagiri Purnima. During these festivals, the temple is beautifully decorated, and elaborate ceremonies are held. Thousands of devotees visit the temple to participate in the celebrations and seek the blessings of the goddess.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Tuljabhavani Temple can enjoy local Maharashtrian cuisine at nearby eateries and food stalls. Popular dishes include puran poli, bhakri, and varan bhaat. Several restaurants also offer a variety of vegetarian and non-vegetarian options, providing a taste of the local flavors.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are various accommodation options available near Tuljabhavani Temple, ranging from budget lodges to comfortable hotels. Many pilgrims prefer to stay in Tuljapur itself, which offers a range of accommodation to suit different budgets. Advance booking is recommended, especially during festival times.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>In addition to the Tuljabhavani Temple, visitors can explore nearby attractions such as the Naldurg Fort, known for its historical significance and stunning architecture. The Dharashiv Caves, which are ancient rock-cut caves, are also worth visiting for their historical and archaeological importance.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Tuljabhavani Temple is located in Tuljapur, in the Osmanabad district of Maharashtra. The temple is approximately 45 kilometers from Osmanabad and around 300 kilometers from Pune. The temple is accessible by road, and visitors can reach it via private vehicles, taxis, or state transport buses from nearby cities. The nearest railway station is Osmanabad, and the nearest airport is Pune Airport.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [76.06615678831405, 18.012413651318784],  // Coordinates for Tuljabhavani Temple, Tuljapur
+          zoom: 15.6
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([76.06615678831405, 18.012413651318784])
+          .addTo(map);
+  </script>
+</body>
+</html> 

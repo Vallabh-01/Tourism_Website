@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajmachi Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+        <div class="container">
+            <h1>Rajmachi Fort</h1>
+            <img src="Rajmachi fort.jpeg" alt="Rajmachi Fort">
+            <div class="info">
+                <h2>Famous For:</h2>
+                <p>Rajmachi is famous for its twin forts, Shrivardhan and Manaranjan, located near Lonavala, Maharashtra. These forts hold historical significance as strategic military outposts and offer panoramic views of the surrounding Sahyadri mountain range.</p>
+            </div>
+            <div class="info">
+                <h2>Activities to Do:</h2>
+                <p>Visitors to Rajmachi Fort can engage in activities such as trekking, camping, birdwatching, and photography amidst the picturesque surroundings of the Western Ghats. The trekking trails leading to Shrivardhan and Manaranjan forts offer stunning views of lush green valleys, waterfalls, and ancient rock-cut caves.</p>
+            </div>
+            <div class="info">
+                <h2>Famous Places to Visit:</h2>
+                <p>Some of the notable attractions within Rajmachi Fort complex include the ancient temples dedicated to Lord Shiva, the Bhairavnath Temple, and the Kondhane caves. Visitors can also explore the historic remnants of fortifications, watchtowers, and water reservoirs scattered across the hilltop.</p>
+            </div>
+            <div class="info">
+                <h2>How to Reach:</h2>
+                <p>Rajmachi Fort can be reached by trekking from the base villages of Udhewadi or Kondhane, located near Lonavala or Karjat respectively. The trekking trails are well-marked but can be challenging, especially during the monsoon season. Alternatively, visitors can hire local jeeps or opt for guided treks organized by tour operators.</p>
+            </div>
+            <div class="info">
+                <h2>Best Time to Visit:</h2>
+                <p>The best time to visit Rajmachi Fort is during the post-monsoon months from October to February when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the monsoon season (June to September) as the trekking trails may become slippery and unsafe due to heavy rainfall.</p>
+            </div>
+            <div class="info">
+                <h2>Entry Fee:</h2>
+                <p>There is usually no entry fee to visit Rajmachi Fort. However, visitors may need to pay nominal charges for parking facilities at the base village or for guided treks organized by local tour operators. It is advisable to carry sufficient water, snacks, and other essentials for the trek.</p>
+            </div>
+            <div class="info">
+                <h2>Accommodation:</h2>
+                <p>While there are no accommodation options available within Rajmachi Fort, visitors can stay in nearby villages or camping sites. Udhewadi village offers basic homestay options, while camping under the starlit sky near the forts is a popular choice for adventure enthusiasts.</p>
+            </div>
+            <div class="info">
+                <h2>Location</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <!-- Mapbox JS -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [73.39790248096627, 18.830587689584576],
+                zoom: 15.5
+            });
+    
+            var marker = new mapboxgl.Marker()
+                .setLngLat([73.39790248096627, 18.830587689584576])
+                .addTo(map);
+        </script>
+   18.830587689584576, 73.39790248096627
+</body>
+</html>

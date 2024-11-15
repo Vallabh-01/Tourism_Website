@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diveagar Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="diveagar-beach">
+    <div class="container">
+      <img src="diveagar.jpeg" alt="Diveagar Beach Image" class="main-image">
+      <div class="content">
+        <h2>Diveagar Beach</h2>
+        <div class="info">
+          <h3>About Diveagar Beach:</h3>
+          <p>Diveagar Beach is a pristine coastal stretch located in the Raigad district of Maharashtra, India. Known for its clean shores, clear waters, and tranquil ambiance, Diveagar Beach is a popular getaway destination for those seeking relaxation and natural beauty.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Diveagar Beach offers visitors a serene environment to unwind and enjoy the beauty of nature. The beach is ideal for activities such as swimming, sunbathing, and beachcombing. Visitors can also take leisurely walks along the shore and admire the picturesque views.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Diveagar Beach that visitors can explore. The Suvarnaganesha Temple, located in Diveagar village, is a revered Hindu temple dedicated to Lord Ganesha and is worth a visit. The nearby Shrivardhan Beach and Harihareshwar Beach are also popular tourist spots.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Diveagar is known for its delicious seafood offerings. Visitors can savor a variety of fresh seafood dishes at the beachside shacks and restaurants lining the coastline. From seafood thalis to fish curry, there are plenty of options to tantalize your taste buds.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Diveagar Beach, ranging from budget guesthouses to beach resorts. Visitors can choose from beachfront cottages offering stunning views of the Arabian Sea or cozy homestays nestled amidst greenery.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Diveagar celebrates various festivals and cultural events throughout the year. The Ganesh Chaturthi festival is a major event celebrated with great fervor, featuring colorful processions, traditional music, and cultural performances. Visitors can immerse themselves in the festive atmosphere and witness the local customs and traditions.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Diveagar Beach is located in the Raigad district of Maharashtra, approximately 170 kilometers from Mumbai. The beach is easily accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Diveagar Beach via public transportation such as buses or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.98487990786948, 18.172607353493838],  // Coordinates for Diveagar Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.98487990786948, 18.172607353493838])
+          .addTo(map);
+  </script>
+</body>
+</html>

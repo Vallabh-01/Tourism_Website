@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guhagar Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="guhagar-beach">
+    <div class="container">
+      <img src="guhagar.jpeg" alt="Guhagar Beach Image" class="main-image">
+      <div class="content">
+        <h2>Guhagar Beach</h2>
+        <div class="info">
+          <h3>About Guhagar Beach:</h3>
+          <p>Guhagar Beach is a pristine and secluded beach located in the Ratnagiri district of Maharashtra, India. Known for its golden sands, clear waters, and tranquil ambiance, Guhagar Beach offers visitors a serene retreat amidst nature.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Guhagar Beach is perfect for relaxation and leisure activities. Visitors can enjoy leisurely walks along the shoreline, sunbathe on the sandy beaches, and take refreshing dips in the Arabian Sea. The beach also offers stunning sunset views.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Guhagar Beach that visitors can explore. The Vyadeshwar Temple, located near the beach, is a significant pilgrimage site dedicated to Lord Shiva. The scenic Anjanvel Lighthouse and the tranquil Hedvi Beach are also worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Guhagar is known for its delicious Konkani cuisine. Visitors can savor a variety of seafood delicacies at the beachside shacks and local eateries. From fresh fish fry to seafood thalis, there are plenty of culinary delights to enjoy.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Guhagar Beach include guesthouses, resorts, and homestays. Visitors can choose from beachfront properties offering stunning views of the Arabian Sea or cozy accommodations nestled amidst lush greenery.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Guhagar celebrates various festivals and cultural events throughout the year. The Ganesha Chaturthi festival is a major event celebrated with great enthusiasm, featuring colorful processions, traditional music, and cultural performances.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Guhagar Beach is located in the Ratnagiri district of Maharashtra, approximately 300 kilometers from Mumbai. The beach is accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Guhagar Beach via public transportation or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.18462973782567,17.48948567336801],  // Coordinates for Guhagar Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.18462973782567, 17.48948567336801])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

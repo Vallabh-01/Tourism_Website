@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandgaon Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="nandgaon-beach">
+    <div class="container">
+      <img src="nandgaon.jpg" alt="Nandgaon Beach Image" class="main-image">
+      <div class="content">
+        <h2>Nandgaon Beach</h2>
+        <div class="info">
+          <h3>About Nandgaon Beach:</h3>
+          <p>Nandgaon Beach is a serene and picturesque beach located along the Konkan coast in Maharashtra, India. Known for its pristine beauty, golden sands, and clear waters, Nandgaon Beach offers visitors a tranquil retreat amidst scenic surroundings, making it an ideal destination for relaxation and rejuvenation.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Nandgaon Beach is perfect for leisurely walks, sunbathing, and swimming in the Arabian Sea. The beach offers breathtaking views of the sunrise and sunset, providing visitors with memorable experiences. Visitors can also explore nearby attractions such as the ancient Nandgaon Fort and the tranquil Nandgaon Temple.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Nandgaon Beach that visitors can explore. The nearby villages of Murud and Kashid offer opportunities for cultural exploration and sightseeing. Visitors can also visit the scenic Phansad Wildlife Sanctuary or explore the historic Korlai Fort.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Nandgaon offers a variety of local delicacies and seafood dishes. Visitors can enjoy fresh seafood meals at beachside shacks and local eateries, including fish thalis, prawn curry, and crab masala. The traditional Malvani cuisine is known for its rich flavors and aromatic spices.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Nandgaon Beach include beach resorts, cottages, and guesthouses. Visitors can choose from a range of options, including beachfront properties offering stunning views of the Arabian Sea or cozy accommodations nestled amidst coconut groves and palm trees.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Nandgaon celebrates various festivals and cultural events throughout the year. The Ganesh Chaturthi festival, dedicated to Lord Ganesha, is celebrated with great fervor, featuring colorful processions, traditional music, and cultural performances.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Nandgaon Beach is located in the Raigad district of Maharashtra, approximately 150 kilometers from Mumbai. The beach is accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Nandgaon Beach via public transportation or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.92599554800451, 18.385811991641074],  // Coordinates for Nandgaon Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.92599554800451, 18.385811991641074])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

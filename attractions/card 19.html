@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lonar Lake Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="lonar-lake">
+    <div class="container">
+      <img src="Lonar Lake, Maharashtra.jpeg" alt="Lonar Lake Image" class="main-image">
+      <div class="content">
+        <h2>Lonar Lake</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Lonar Lake, also known as Lonar Crater, is a unique and ancient saltwater lake located in the Buldhana district of Maharashtra, India. It was formed by the impact of a meteorite that struck the Earth around 52,000 ± 6,000 years ago. The lake, which has a diameter of about 1.8 kilometers and a depth of approximately 150 meters, is one of only four known hyper-velocity impact craters in basaltic rock anywhere on Earth.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Lonar Lake offers several attractions for visitors:</p>
+          <ul>
+            <li><strong>Lonar Lake:</strong> The main attraction itself, the lake is surrounded by lush greenery and is known for its unique water chemistry and biodiversity.</li>
+            <li><strong>Daitya Sudan Temple:</strong> An ancient Hindu temple dedicated to Lord Vishnu, known for its intricate carvings and historical significance.</li>
+            <li><strong>Gomukh Temple:</strong> A temple with a perennial stream of fresh water, believed to be sacred by locals.</li>
+            <li><strong>Kamalja Devi Temple:</strong> A serene spot near the crater, offering stunning views of the lake and its surroundings.</li>
+            <li><strong>Scientific Studies:</strong> The lake has attracted scientists from all over the world due to its unique geological and ecological features, making it a hub for research and study.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Lonar Lake can engage in various activities such as trekking around the crater, bird watching, exploring the ancient temples, and learning about the scientific significance of the crater. The area offers a peaceful environment for nature walks and photography.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Lonar Lake is from October to March when the weather is pleasant and suitable for outdoor activities. The monsoon season (June to September) brings heavy rainfall, which can make exploring the area difficult.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Lonar Lake is well-connected by road and rail. The nearest railway station is Jalna, located about 90 kilometers away. From Jalna, visitors can hire taxis or take buses to reach Lonar. The nearest airport is Aurangabad, approximately 150 kilometers away. Regular buses and taxis are available from Aurangabad to Lonar.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Lonar offers basic accommodation options, including guesthouses and lodges. Visitors can also find hotels in nearby towns like Jalna and Aurangabad. It is advisable to book in advance, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [76.50820479670625, 19.976957528529773],  // Coordinates for Lonar Lake, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([76.50820479670625, 19.976957528529773])
+          .addTo(map);
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandhar Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Kandhar Fort</h1>
+        <img src="kandhar.jpeg" alt="Kandhar Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Kandhar Fort is famous for its historical significance during various dynasties, including the Rashtrakutas, Chalukyas, and Yadavas. It is renowned for its well-preserved fortifications, strategic location, and insights into medieval architecture and culture.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Kandhar Fort can explore the ancient fortifications, enjoy guided tours to learn about its history, and take in the panoramic views from the top of the fort. Photography enthusiasts will find plenty of opportunities to capture the scenic beauty and architectural marvels of the fort. Additionally, visitors can enjoy picnicking and nature walks around the fort.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Notable attractions within Kandhar Fort include the main entrance gate, which is an architectural marvel, the ancient temples within the fort complex, and the water reservoirs. The fort's walls and bastions provide a glimpse into the military architecture of the time. The nearby Kandhar Dargah, a significant religious site, is also worth visiting.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Kandhar Fort is located in the Nanded district of Maharashtra. It is accessible by road from major cities like Nanded and Latur. The nearest railway station is Nanded, from where one can hire a taxi or take a bus to reach the fort. State transport buses and private vehicles are available from Nanded to Kandhar town.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Kandhar Fort is during the winter months from October to February when the weather is pleasant and suitable for outdoor activities. The fort can also be visited during the monsoon season (June to September) when the surroundings are lush and green, but visitors should be cautious of slippery paths.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no formal entry fee to visit Kandhar Fort. Visitors can explore the fort and its surroundings freely. However, it is advisable to check with local authorities or guides for any updates on charges or guided tour fees.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Accommodation options near Kandhar Fort include various guesthouses, hotels, and lodges in Kandhar town and nearby Nanded city. Visitors can find a range of budget and mid-range options to suit their preferences and budgets. It is advisable to book accommodation in advance, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [77.2015144895348, 18.873967757405318],
+            zoom: 14.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([77.2015144895348, 18.873967757405318])
+            .addTo(map);
+    </script>
+
+</body>
+</html>

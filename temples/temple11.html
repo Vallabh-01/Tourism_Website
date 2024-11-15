@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gajanan Maharaj Mandir</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="gajanan-maharaj-mandir">
+    <div class="container">
+      <img src="gajanan.jpg" alt="Gajanan Maharaj Mandir Image" class="main-image">
+      <div class="content">
+        <h2>Gajanan Maharaj Mandir</h2>
+        <div class="info">
+          <h3>About Gajanan Maharaj Mandir:</h3>
+          <p>Gajanan Maharaj Mandir, located in Shegaon, Maharashtra, is a revered shrine dedicated to Saint Gajanan Maharaj. The temple is a major pilgrimage site and attracts thousands of devotees from all over India who come to seek the blessings of the saint.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The temple was established to honor Gajanan Maharaj, a saint who appeared in Shegaon in 1878. He was known for his spiritual teachings, miracles, and simple lifestyle. The mandir was built by his followers to continue his legacy and provide a place for devotion and worship.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The Gajanan Maharaj Mandir is built in a traditional architectural style with a serene and peaceful ambiance. The temple complex includes the main shrine, a meditation hall, and other facilities for pilgrims. The temple is beautifully adorned with carvings and has a spacious courtyard for devotees.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Visitors to the temple can participate in various devotional activities such as daily aarti, bhajans, and special poojas. The temple also organizes spiritual discourses and festivals, particularly during the birth and death anniversaries of Gajanan Maharaj.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Shegaon is famous for its delicious Shegaon Kachori, a popular local snack. Visitors can enjoy this delicacy along with other traditional Maharashtrian dishes at local eateries and food stalls near the temple. The temple's prasad (sacred offering) is also a must-try for visitors.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near the Gajanan Maharaj Mandir, including dharamshalas (pilgrim rest houses), lodges, and hotels. The temple trust also provides accommodation facilities for devotees, ensuring a comfortable stay during their pilgrimage.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>While visiting the Gajanan Maharaj Mandir, devotees can also explore nearby attractions such as the Anand Sagar, a beautifully landscaped garden and spiritual retreat developed by the temple trust. The region is rich in cultural heritage, offering a comprehensive spiritual experience for travelers.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Gajanan Maharaj Mandir is located in Shegaon, Buldhana district, Maharashtra. The temple is well-connected by road and rail, making it accessible from major cities like Nagpur and Aurangabad. Pilgrims can reach Shegaon by state transport buses, trains, or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [76.70186122434045, 20.791487268817104],  // Coordinates for Gajanan Maharaj Mandir, Shegaon, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([76.70186122434045, 20.791487268817104])
+          .addTo(map);
+  </script>
+</body>
+</html> 

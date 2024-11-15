@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling for links */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Active state for links */
+a:active {
+  color: #d9534f;
+}
+
+.navbar {
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  transform: translateY(-50px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 150px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.scrolled .logo img {
+  transform: scale(0.9);
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin-right: 20px;
+}
+
+.navbar .nav-links a {
+  display: block;
+  padding: 12px 12px;
+  color: #272525;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #babebd;
+  border-radius: 20px;
+}
+
+.navbar .nav-links a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.navbar .nav-links a.active:hover {
+  background-color: #0062cc;
+}
+
+.navbar .nav-links a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.navbar .nav-links a:active {
+  background-color: #0056b3;
+}
+
+.navbar .hamburger {
+  display: none;
+}
+
+/* Home Section  */
+#home {
+  height: 60vh;
+  background-image: url('abc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#container {
+  max-width: 780px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+#container img {
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 13%;
+  opacity: 0.8;
+}
+
+#container h1 {
+  font-size: 38pxx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#container p {
+  font-size: 18px;
+  color: #242424;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Section styles */
+section {
+  padding: 11%;
+  width: auto;
+  height: 41.5vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.container h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* history section  */
+#history {
+  height: 60vh;
+  background-image: url('Kailash temple.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#history::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 0.5;
+}
+
+.container h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.history-content {
+  padding: 20px;
+}
+
+.history-info h3 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.history-info p {
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+/* Attraction Section  */
+#attractions {
+  height: 80vh;
+  background-image: url('attractions/back.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  display: none; /* Hide all cards initially */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 350px;
+  background-color: #ECEFF1;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card.active {
+  display: block; /* Display cards with active class */
+}
+
+#loadMore {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#previous {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.button-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.button-container button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* forts section  */
+
+#forts {
+  height: 80vh;
+  background-image: url('forts img/Shilalekh on Raigad fort.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#forts::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adjust blur value as needed */
+  z-index: -1; /* Ensure the blurred overlay is behind the content */
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  display: none;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 350px;
+  background-color: #ECEFF1;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card.active {
+  display: block; /* Display cards with active class */
+}
+
+#loadMore {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#previous {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.button-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.button-container button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Beach Section  */
+
+#beaches {
+  height: 80vh;
+  background-image: url('beaches/beach_LE_auto_x2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#beaches::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adjust blur value as needed */
+  z-index: -1; /* Ensure the blurred overlay is behind the content */
+}
+
+/* Food section  */
+
+#food {
+  height: 80vh;
+  background-image: url('food/food_section.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#food::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adjust blur value as needed */
+  z-index: -1; /* Ensure the blurred overlay is behind the content */
+}
+
+/* festival section */
+
+
+#festivals {
+  height: 80vh;
+  background-image: url('festivals/festival_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#festivals::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adjust blur value as needed */
+  z-index: -1; /* Ensure the blurred overlay is behind the content */
+}
+
+/* temples section  */
+
+
+#temples {
+  height: 80vh;
+  background-image: url('temples/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#temples::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adjust blur value as needed */
+  z-index: -1; /* Ensure the blurred overlay is behind the content */
+}
+
+/* navbar animations  */
+
+/* Navbar animation */
+.navbar-enter-active,
+.navbar-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-enter,
+.navbar-leave-to {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.navbar-enter-to,
+.navbar-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-links-enter-active,
+.navbar-links-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-links-enter,
+.navbar-links-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.navbar-links-enter-to,
+.navbar-links-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-hamburger-enter-active,
+.navbar-hamburger-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hamburger-enter,
+.navbar-hamburger-leave-to {
+  transform: rotate(180deg);
+}
+
+.navbar-hamburger-enter-to,
+.navbar-hamburger-leave {
+  transform: rotate(0);
+}
+
+.navbar-hamburger-line-enter-active,
+.navbar-hamburger-line-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-hamburger-line-enter,
+.navbar-hamburger-line-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.navbar-hamburger-line-enter-to,
+.navbar-hamburger-line-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-hamburger-line-1-enter-active,
+.navbar-hamburger-line-1-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-hamburger-line-1-enter,
+.navbar-hamburger-line-1-leave-to {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.navbar-hamburger-line-1-enter-to,
+.navbar-hamburger-line-1-leave {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+.navbar-hamburger-line-2-enter-active,
+.navbar-hamburger-line-2-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-hamburger-line-2-enter,
+.navbar-hamburger-line-2-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.navbar-hamburger-line-2-enter-to,
+.navbar-hamburger-line-2-leave {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.navbar-hamburger-line-3-enter-active,
+.navbar-hamburger-line-3-leave-active {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-hamburger-line-3-enter,.navbar-hamburger-line-3-leave-to {
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+.navbar-hamburger-line-3-enter-to,
+.navbar-hamburger-line-3-leave {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+.navbar-hamburger-line-1,
+.navbar-hamburger-line-2,
+.navbar-hamburger-line-3 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hamburger-line-1-enter,
+.navbar-hamburger-line-1-leave-to {
+  transform: rotate(45deg);
+}
+
+.navbar-hamburger-line-2-enter,
+.navbar-hamburger-line-2-leave-to {
+  transform: translateX(-10px);
+}
+
+.navbar-hamburger-line-3-enter,
+.navbar-hamburger-line-3-leave-to {
+  transform: rotate(-45deg);
+}
+
+.navbar-hamburger-line-1-enter-to,
+.navbar-hamburger-line-1-leave,
+.navbar-hamburger-line-2-enter-to,
+.navbar-hamburger-line-2-leave,
+.navbar-hamburger-line-3-enter-to,
+.navbar-hamburger-line-3-leave {
+  transform: rotate(0);
+}
+
+.navbar-hamburger-line-1-enter-to,
+.navbar-hamburger-line-2-enter-to,
+.navbar-hamburger-line-3-enter-to {
+  transition-delay: 0.1s;
+}
+
+.navbar-hamburger-line-1-leave,
+.navbar-hamburger-line-2-leave,
+.navbar-hamburger-line-3-leave {
+  transition-delay: 0s;
+}
+
+.navbar-hamburger-line-1-enter,
+.navbar-hamburger-line-2-enter,
+.navbar-hamburger-line-3-enter {
+  transition-delay: 0.1s;
+}
+
+.navbar-hamburger-line-1-leave-to,
+.navbar-hamburger-line-2-leave-to,
+.navbar-hamburger-line-3-leave-to {
+  transition-delay: 0s;
+}
+
+.navbar-hamburger-line-1-enter-to,
+.navbar-hamburger-line-2-enter-to,
+.navbar-hamburger-line-3-enter-to {
+  opacity: 1;
+}
+
+.navbar-hamburger-line-1-enter,
+.navbar-hamburger-line-2-enter,
+.navbar-hamburger-line-3-enter {
+  opacity: 0;
+}
+
+.navbar-hamburger-line-1-leave,
+.navbar-hamburger-line-2-leave,
+.navbar-hamburger-line-3-leave {
+  opacity: 1;
+}
+
+.navbar-hamburger-line-1-leave-to,
+.navbar-hamburger-line-2-leave-to,
+.navbar-hamburger-line-3-leave-to {
+  opacity: 0;
+}

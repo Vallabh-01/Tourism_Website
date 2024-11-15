@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhagad Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Sudhagad Fort</h1>
+        <img src="Sudhagad_Fort.jpg" alt="Sudhagad Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Sudhagad Fort is known for its lush greenery, trekking trails, and historical ruins dating back to the Maratha era. It is one of the better-preserved forts in Maharashtra and offers panoramic views of the surrounding landscape.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Sudhagad Fort can engage in activities such as trekking, exploring the historic ruins, and enjoying the scenic beauty of the Western Ghats. The trek to the fort is moderately challenging and is popular among adventure enthusiasts. Additionally, camping is a popular activity for those who wish to experience the fort's ambiance overnight.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some notable attractions within Sudhagad Fort include the Mahadarwaja (main entrance), the Bhorai Devi Temple, the large plateau at the top which provides a panoramic view, and the several water cisterns and ruins that reflect the fort's historical significance.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Sudhagad Fort is located in the Raigad district of Maharashtra. It is accessible by road from Mumbai and Pune. The nearest major railway station is at Khopoli, from where one can hire a taxi or take a bus to the base village of Thakurwadi or Dhondase. From these villages, visitors can start their trek to the fort.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Sudhagad Fort is during the monsoon (June to September) when the fort is surrounded by lush greenery and waterfalls, and during the winter months (October to February) when the weather is cool and pleasant. It is advisable to avoid trekking during the peak summer months due to the heat.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no formal entry fee to visit Sudhagad Fort. However, some local groups or authorities might charge a nominal fee for maintenance or as a trekking guide fee. It's always a good idea to check with local sources for any updates on charges.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Accommodation options near Sudhagad Fort are limited. Visitors can opt for basic lodgings in nearby villages or carry their own camping gear to stay overnight at the fort. For more comfortable accommodations, staying in Khopoli or Pali is recommended, as they offer a range of guesthouses and hotels.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.32103370697178, 18.53975576907563],
+            zoom: 14.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.32103370697178, 18.53975576907563])
+            .addTo(map);
+    </script>
+
+</body>
+</html>

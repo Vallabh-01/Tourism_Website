@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visapur Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Visapur Fort</h1>
+        <img src="visapur.jpg" alt="Visapur Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Visapur Fort is known for its grandeur, architectural brilliance, and picturesque surroundings in the Western Ghats. It is one of the popular trekking destinations in Maharashtra and offers a rich historical experience with its fortifications and ancient ruins.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Visapur Fort can engage in activities such as trekking, exploring the historic ruins, and enjoying the panoramic views of the surrounding landscape. The trek is moderately challenging and attracts adventure enthusiasts and history buffs alike. Photography and nature walks are also popular activities here.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some notable attractions within Visapur Fort include the ancient water cisterns, the large plateau offering stunning views, and the fort walls and bastions that reflect its historical significance. The Hanuman Temple, located within the fort, is another point of interest for visitors.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Visapur Fort is located near Lonavala in the Pune district of Maharashtra. It is accessible by road from Mumbai and Pune. The nearest railway station is Malavli, from where one can hire a taxi or take a bus to the base village of Bhaje or Patan. From these villages, visitors can start their trek to the fort.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Visapur Fort is during the monsoon (June to September) when the fort is surrounded by lush greenery and waterfalls, and during the winter months (October to February) when the weather is cool and pleasant. It is advisable to avoid trekking during the peak summer months due to the heat.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no formal entry fee to visit Visapur Fort. However, some local groups or authorities might charge a nominal fee for maintenance or as a trekking guide fee. It's always a good idea to check with local sources for any updates on charges.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Accommodation options near Visapur Fort include various guesthouses, hotels, and resorts in Lonavala and nearby areas. For a more adventurous experience, visitors can opt for camping at the base village or at the fort itself, though it's advisable to carry all necessary camping gear and provisions.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.49092992009872, 18.72177336024327],
+            zoom: 14.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.49092992009872, 18.72177336024327])
+            .addTo(map);
+    </script>
+
+</body>
+</html>

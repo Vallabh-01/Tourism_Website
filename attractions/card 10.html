@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sula Vineyards Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="sula-vineyards">
+    <div class="container">
+      <img src="Sula Vineyards.jpeg" alt="Sula Vineyards Image" class="main-image">
+      <div class="content">
+        <h2>Sula Vineyards</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Sula Vineyards, located in Nashik, Maharashtra, is one of India's leading wineries and a prominent name in the country's wine industry. Established in 1999 by Rajeev Samant, Sula Vineyards has played a significant role in popularizing wine culture in India and promoting wine tourism in the region.</p>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Sula Vineyards can enjoy a variety of activities, including guided tours of the vineyards and winemaking facilities, wine tastings, and vineyard picnics. The winery offers immersive experiences where guests can learn about the winemaking process from grape to bottle and sample a selection of Sula's acclaimed wines.</p>
+        </div>
+        <div class="info">
+          <h3>Wine Varieties:</h3>
+          <p>Sula Vineyards produces a diverse range of wines, including Sauvignon Blanc, Chenin Blanc, Shiraz, Cabernet Sauvignon, and Zinfandel, among others. The winery's portfolio caters to different tastes and preferences, offering both red and white wines suitable for various occasions and palates.</p>
+        </div>
+        <div class="info">
+          <h3>Events:</h3>
+          <p>Sula Vineyards hosts a range of events throughout the year, including wine festivals, concerts, and culinary experiences. The SulaFest, held annually in February, is a popular event that combines music, wine, and gourmet food, attracting visitors from across the country and beyond.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>The vineyard offers accommodation options for guests looking to extend their stay, including the Beyond by Sula boutique hotel and the Source at Sula guesthouse. These properties provide a comfortable retreat amidst the vineyards, with amenities such as dining facilities, swimming pools, and spa services.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Sula Vineyards is situated in the Nashik wine region of Maharashtra, approximately 180 kilometers northeast of Mumbai. The winery's picturesque location amidst rolling hills and vineyards makes it an ideal destination for a wine getaway or day trip from Mumbai or Pune.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.68876338731441, 20.005754601594177],  // Coordinates for Sula Vineyards
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.68876338731441, 20.005754601594177])
+          .addTo(map);
+  </script>
+</body>
+</html> 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lohagad Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+    
+        <div class="container">
+            <h1>Lohagad Fort</h1>
+            <img src="lohgad.jpeg" alt="Lohagad Fort">
+            <div class="info">
+                <h2>Famous For:</h2>
+                <p>Lohagad Fort is known for its impressive architecture, historical significance, and panoramic views of the surrounding landscape. It holds a prominent place in Maratha history and served as a strategic stronghold for various rulers.</p>
+            </div>
+            <div class="info">
+                <h2>Activities to Do:</h2>
+                <p>Visitors to Lohagad Fort can engage in activities such as trekking, exploring the fort's ancient ruins and fortification walls, enjoying nature walks amidst lush greenery, and capturing breathtaking views from the top of the fort.</p>
+            </div>
+            <div class="info">
+                <h2>Famous Places to Visit:</h2>
+                <p>Some of the notable attractions within Lohagad Fort include the Vinchu Kata (Scorpion's Tail) offering stunning views of the surrounding valleys, the Ganesh Darwaja (main entrance), the Bhaja Caves located near the fort, and the Visapur Fort situated nearby.</p>
+            </div>
+            <div class="info">
+                <h2>How to Reach:</h2>
+                <p>Lohagad Fort is located near the hill station of Lonavala in the Pune district of Maharashtra. The fort is accessible by road from major cities like Mumbai and Pune. Visitors can drive or take public transportation to reach the fort base and then hike up to the fort entrance.</p>
+            </div>
+            <div class="info">
+                <h2>Best Time to Visit:</h2>
+                <p>The best time to visit Lohagad Fort is during the winter months from October to February when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the monsoon season (June to September) as the trekking trails may become slippery and unsafe due to heavy rainfall.</p>
+            </div>
+            <div class="info">
+                <h2>Entry Fee:</h2>
+                <p>There is no entry fee to visit Lohagad Fort. However, visitors may need to pay for parking facilities at the fort base. Donations are appreciated for the maintenance and preservation of the fort.</p>
+            </div>
+            <div class="info">
+                <h2>Accommodation:</h2>
+                <p>While there are no accommodation options available within Lohagad Fort, visitors can find various hotels, resorts, and guesthouses in Lonavala town. Lonavala offers a range of accommodation options to suit different preferences and budgets, making it convenient for travelers to stay while exploring the fort and nearby attractions.</p>
+            </div>
+            <div class="info">
+                <h2>Location</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <!-- Mapbox JS -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [73.4763, 18.7102],
+                zoom: 13.5
+            });
+    
+            var marker = new mapboxgl.Marker()
+                .setLngLat([73.4763, 18.7102])
+                .addTo(map);
+        </script>
+    
+</body>
+</html>

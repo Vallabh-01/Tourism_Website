@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajgad Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+        <div class="container">
+            <h1>Rajgad Fort</h1>
+            <img src="rajgad.jpeg" alt="Rajgad Fort">
+            <div class="info">
+                <h2>Famous For:</h2>
+                <p>Rajgad Fort served as the capital of the Maratha Empire before Raigad. It holds historical significance as it was the stronghold of Chhatrapati Shivaji Maharaj and played a crucial role in Maratha history, serving as a strategic military outpost and administrative center.</p>
+            </div>
+            <div class="info">
+                <h2>Activities to Do:</h2>
+                <p>Visitors to Rajgad Fort can engage in various activities such as trekking, exploring the historic ruins and fortifications, enjoying panoramic views of the Sahyadri mountain range, and experiencing the thrill of camping amidst nature.</p>
+            </div>
+            <div class="info">
+                <h2>Famous Places to Visit:</h2>
+                <p>Some of the notable attractions within Rajgad Fort include the Bale Killa (citadel), the Padmavati Temple dedicated to Goddess Padmavati, and the Sanjeevani Machi known for its sheer cliffs and scenic beauty. The Pali Darwaja (main entrance) and the Suvela Machi are also worth exploring.</p>
+            </div>
+            <div class="info">
+                <h2>How to Reach:</h2>
+                <p>Rajgad Fort is located near Pune in the Sahyadri mountain range. The fort is accessible by road from major cities like Mumbai and Pune. Visitors can reach the fort base by car or public transportation and then hike or drive up to the fort entrance.</p>
+            </div>
+            <div class="info">
+                <h2>Best Time to Visit:</h2>
+                <p>The best time to visit Rajgad Fort is during the winter months from October to February when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the monsoon season (June to September) as the trekking trails may become slippery and unsafe due to heavy rainfall.</p>
+            </div>
+            <div class="info">
+                <h2>Entry Fee:</h2>
+                <p>There is no entry fee to visit Rajgad Fort. However, visitors may need to pay for parking facilities at the fort base. Additional charges may apply for guided tours, food, and other activities within the fort premises.</p>
+            </div>
+            <div class="info">
+                <h2>Accommodation:</h2>
+                <p>While there are no accommodation options available within Rajgad Fort, visitors can find various hotels, resorts, and guesthouses in Pune city. Pune offers a range of accommodation options to suit different preferences and budgets, making it convenient for travelers to stay while exploring the fort and nearby attractions.</p>
+            </div>
+            <div class="info">
+                <h2>Location</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [73.6858, 18.2556],     
+                zoom: 13
+            });
+    
+            var marker = new mapboxgl.Marker()
+            .setLngLat([73.6858, 18.2556])
+                .addTo(map);
+        </script>
+</body>
+</html>

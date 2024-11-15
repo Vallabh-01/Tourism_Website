@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheran Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="matheran">
+    <div class="container">
+      <img src="Matheran.jpeg" alt="Matheran Image" class="main-image">
+      <div class="content">
+        <h2>Matheran</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Matheran is a quaint hill station located in the Western Ghats of Maharashtra, India. At an elevation of around 800 meters above sea level, it is known for its lush greenery, pleasant climate, and colonial-era charm. Matheran, meaning "forest on the forehead," is Asia's only automobile-free hill station, providing a peaceful retreat from the bustling city life.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Matheran offers several attractions for nature lovers and tourists:</p>
+          <ul>
+            <li><strong>Panorama Point:</strong> A popular viewpoint offering panoramic views of the surrounding hills and valleys, especially stunning at sunrise and sunset.</li>
+            <li><strong>Louisa Point:</strong> Known for its breathtaking views of the Prabal Fort and Vishalgad.</li>
+            <li><strong>Charlotte Lake:</strong> A serene lake that serves as the primary source of drinking water for the town and is a great spot for picnics.</li>
+            <li><strong>Echo Point:</strong> Famous for its echo phenomenon, this spot offers fantastic views and is a favorite among visitors.</li>
+            <li><strong>One Tree Hill Point:</strong> Known for its single Jambhul tree, it provides a unique and picturesque view.</li>
+            <li><strong>Shivaji's Ladder:</strong> A series of steps named after the Maratha king Shivaji, leading to a great viewpoint.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Matheran can engage in various activities such as trekking, horse riding, sightseeing, and nature walks. The hill station's serene environment and pleasant weather make it an ideal destination for outdoor activities and relaxation.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Matheran is from October to May. During this period, the weather is pleasant and suitable for outdoor activities. The monsoon season (June to September) brings heavy rainfall, which enhances the natural beauty but may also cause travel difficulties.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Matheran is well-connected by road and rail. The nearest railway station is Neral, from where visitors can take the heritage narrow-gauge train to Matheran or hire a taxi. The hill station is approximately 80 kilometers from Mumbai and 120 kilometers from Pune, making it accessible by car or bus. Note that vehicles are not allowed beyond Dasturi Naka, the entry point to Matheran.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Matheran offers a range of accommodation options, including resorts, hotels, and budget guesthouses. Visitors can choose from various lodging options based on their preferences and budget. Advance booking is recommended, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.26458583150674,18.990071317955373 ],  // Coordinates for Matheran, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.26458583150674,18.990071317955373 ])
+          .addTo(map);
+  </script>
+</body>
+</html>

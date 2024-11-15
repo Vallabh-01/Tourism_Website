@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khandoba Temple, Jejuri</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="khandoba-temple">
+    <div class="container">
+      <img src="Khandoba.jpg" alt="Khandoba Temple Image" class="main-image">
+      <div class="content">
+        <h2>Khandoba Temple, Jejuri</h2>
+        <div class="info">
+          <h3>About Khandoba Temple:</h3>
+          <p>Khandoba Temple, located in Jejuri, Maharashtra, is one of the most revered temples dedicated to Lord Khandoba, a form of Lord Shiva. The temple is perched atop a hill and is famous for its grand celebrations, particularly during the festival of Champa Shashti. Devotees from all over Maharashtra visit the temple to seek blessings.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Khandoba Temple in Jejuri has a rich history that dates back to the medieval period. It is believed that the temple was constructed by the Yadava rulers and has been an important center of worship for the Dhangar community. The temple complex consists of several smaller shrines and structures that add to its historical significance.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The temple architecture is a blend of traditional Maratha style and Hemadpanthi construction. The main temple features intricate carvings and sculptures, depicting various deities and mythological scenes. The temple's entrance is marked by a grand staircase, which is often covered in turmeric powder during festivals, giving it a vibrant yellow hue.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting Khandoba Temple engage in various rituals and ceremonies, including offering turmeric, coconuts, and flowers to the deity. The temple is particularly famous for the 'Bhandara festival', where devotees throw turmeric powder in the air, creating a spectacular sight. Special prayers and aarti are performed daily, attracting numerous pilgrims.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Jejuri can enjoy traditional Maharashtrian cuisine, which includes dishes like Bhakri, Pithla, and Zunka. The local eateries and food stalls offer a variety of vegetarian meals, providing an authentic taste of the region's culinary traditions. During festivals, special sweet dishes like Puran Poli are also prepared.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available in and around Jejuri, ranging from budget lodges to mid-range hotels. Many of these accommodations provide basic amenities and are located close to the temple, ensuring convenience for pilgrims. It is advisable to book accommodations in advance, especially during festival times.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Jejuri is surrounded by several attractions that visitors can explore. The Malhargad Fort, also known as Sonori Fort, offers trekking opportunities and panoramic views. The Saswad region, with its historic temples and scenic landscapes, is another nearby destination. Pune city, known for its cultural heritage, is also within a short driving distance.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Khandoba Temple is located in Jejuri, approximately 50 kilometers from Pune, Maharashtra. The temple is well-connected by road, and visitors can reach it via private vehicles, taxis, or buses. The nearest railway station is Jejuri Railway Station, and the nearest airport is Pune International Airport.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [74.16057394685856, 18.272468038304638],  // Coordinates for Khandoba Temple, Jejuri
+          zoom: 14.3
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([74.16057394685856, 18.272468038304638])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

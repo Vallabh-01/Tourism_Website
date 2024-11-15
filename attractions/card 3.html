@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gateway of India Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="gateway-of-india">
+    <div class="container">
+      <img src="Gateway of India.jpeg" alt="Gateway of India Image" class="main-image">
+      <div class="content">
+        <h2>Gateway of India</h2>
+        <div class="info">
+          <h3>About Gateway of India:</h3>
+          <p>The Gateway of India is an iconic monument located in Mumbai, Maharashtra, India. Built during the British Raj, it was inaugurated in 1924 to commemorate the visit of King George V and Queen Mary to Bombay (now Mumbai). The monument stands as a symbol of historical significance and architectural grandeur, overlooking the Arabian Sea.</p>
+        </div>
+        <div class="info">
+          <h3>Architecture:</h3>
+          <p>The Gateway of India is designed in the Indo-Saracenic architectural style, blending elements of Hindu, Islamic, and European architecture. The monument features intricate latticework, ornamental domes, and bas-reliefs depicting historical events. The central dome of the structure is adorned with intricate motifs and sculptures, adding to its majestic appearance.</p>
+        </div>
+        <div class="info">
+          <h3>Significance:</h3>
+          <p>Over the years, the Gateway of India has become a symbol of Mumbai's identity and a popular tourist attraction. It serves as a starting point for boat rides to the Elephanta Caves and provides panoramic views of the Arabian Sea. The monument also holds historical importance, witnessing various political events and ceremonies throughout India's independence movement.</p>
+        </div>
+        <div class="info">
+          <h3>Visiting Information:</h3>
+          <p>The Gateway of India is open to visitors throughout the day, and there is no entry fee to explore the monument. Visitors can take leisurely strolls around the structure, admire its architectural beauty, and enjoy views of the sea. Boat rides to nearby attractions such as Elephanta Caves are available from the waterfront near the Gateway of India.</p>
+          <p>The area surrounding the Gateway of India is bustling with activity, with street vendors selling snacks, souvenirs, and local handicrafts. Visitors can also find numerous restaurants and cafes nearby, offering a variety of culinary delights.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Gateway of India is situated in South Mumbai, overlooking the Arabian Sea. It is located at the Apollo Bunder waterfront, near the Taj Mahal Palace Hotel. The monument is easily accessible by public transportation, including buses, taxis, and local trains.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.8347, 18.9220],  // Coordinates for Gateway of India, Mumbai
+          zoom: 15
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.8347, 18.9220])
+          .addTo(map);
+  </script>
+</body>
+</html>

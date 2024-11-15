@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dagdu Sheth Halwai Ganapati Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="dagdusheth-halwai-ganapati-temple">
+    <div class="container">
+      <img src="dagduseth.jpg" alt="Dagdu Sheth Halwai Ganapati Temple Image" class="main-image">
+      <div class="content">
+        <h2>Dagdu Sheth Halwai Ganapati Temple</h2>
+        <div class="info">
+          <h3>About Dagdu Sheth Halwai Ganapati Temple:</h3>
+          <p>The Dagdusheth Halwai Ganapati Temple is one of the most famous and revered temples in Pune, Maharashtra. Dedicated to Lord Ganesha, the temple was built by the sweetmeat seller Dagdusheth Halwai and has become a significant landmark and pilgrimage site in the city. The temple is known for its grand celebrations of the Ganesh Chaturthi festival.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The temple was established over 125 years ago by Dagdusheth Halwai and his wife, who were grieving the loss of their son. To overcome their sorrow, they built the temple in honor of Lord Ganesha. Over the years, the temple has become a symbol of faith and devotion, attracting thousands of devotees daily.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The architecture of the Dagdusheth Halwai Ganapati Temple is stunning, with a blend of traditional and modern designs. The idol of Lord Ganesha is adorned with gold and precious ornaments, making it a spectacular sight. The temple complex is spacious, allowing devotees to participate in various rituals and ceremonies.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>The temple is known for its daily aarti and offerings to Lord Ganesha. Devotees can participate in various religious activities, including abhishekam, special poojas, and bhajans. The Ganesh Chaturthi festival is celebrated with immense grandeur, featuring elaborate decorations, processions, and cultural events.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to the Dagdusheth Halwai Ganapati Temple can enjoy delicious local cuisine at nearby eateries. Pune is famous for its street food, including dishes like vada pav, misal pav, and bhel puri. Traditional Maharashtrian thalis and sweets like Puran Poli and Shrikhand are also popular among visitors.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near the temple, ranging from budget hotels to mid-range and luxury hotels. Many of these accommodations provide comfortable amenities and are located close to the temple, ensuring convenience for pilgrims. Advance booking is recommended during festival seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>The Dagdusheth Halwai Ganapati Temple is located in the heart of Pune, making it easy for visitors to explore nearby attractions. Shaniwar Wada, an iconic historical fortification, is just a short distance away. Other nearby attractions include the bustling Laxmi Road market, the serene Saras Baug, and the historic Parvati Hill Temple.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Dagdusheth Halwai Ganapati Temple is located in Budhwar Peth, Pune, Maharashtra. The temple is easily accessible by road and is well-connected to other parts of the city. Visitors can reach the temple via public transportation such as buses, auto-rickshaws, and taxis, or by private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.85602549387141, 18.516487585405205],  // Coordinates for Dagdu Sheth Halwai Ganapati Temple, Pune
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.85602549387141, 18.516487585405205])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

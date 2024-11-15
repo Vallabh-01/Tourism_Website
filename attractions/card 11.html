@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marine Drive, Mumbai</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="marine-drive">
+    <div class="container">
+      <img src="marine_drive.jpg" alt="Marine Drive Image" class="main-image">
+      <div class="content">
+        <h2>Marine Drive, Mumbai</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Marine Drive, also known as the Queen's Necklace, is a picturesque promenade in South Mumbai, Maharashtra, India. Stretching along the Arabian Sea coast, Marine Drive is renowned for its sweeping arc-shaped layout, stunning sunset views, and vibrant atmosphere, making it one of Mumbai's most iconic landmarks.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Marine Drive offers a range of attractions and activities for visitors. The promenade is popular for leisurely strolls, jogging, and cycling, providing a refreshing escape from the bustling city life. The scenic beauty of Marine Drive, especially during sunset and at night when the street lights resemble a string of pearls, draws both locals and tourists alike.</p>
+        </div>
+        <div class="info">
+          <h3>Landmarks:</h3>
+          <p>Several landmarks and prominent buildings line Marine Drive, including the historic Taraporewala Aquarium, which showcases a diverse range of marine life. The promenade also offers panoramic views of iconic structures such as the Rajabai Clock Tower and the skyline of Nariman Point, contributing to its allure.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>Marine Drive reflects the vibrant and cosmopolitan culture of Mumbai. The promenade is a melting pot of diverse communities, with people from all walks of life coming together to relax, socialize, and enjoy the sea breeze. Visitors can experience the city's dynamic energy and hospitality while exploring Marine Drive.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Marine Drive is located in South Mumbai, stretching from Nariman Point to Malabar Hill. The promenade is easily accessible by road and is well-connected to other parts of the city. Visitors can reach Marine Drive via public transportation such as buses, taxis, and local trains, or by private vehicles.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.8228059721294, 18.94346060512681],  // Coordinates for Marine Drive, Mumbai
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.8228059721294, 18.94346060512681])
+          .addTo(map);
+  </script>
+</body>
+</html> 

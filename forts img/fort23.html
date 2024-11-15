@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purandar Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Purandar Fort</h1>
+        <img src="Purandar.jpg" alt="Purandar Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Purandar Fort, located near Pune, Maharashtra, is famous for its strategic location and multiple gates. It played a significant role in Maratha history, serving as a military stronghold and a center of administration. The fort is known for its historical significance and architectural grandeur.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Purandar Fort can engage in trekking and hiking through scenic trails surrounded by lush greenery. The fort's rugged terrain offers opportunities for adventure activities such as rock climbing and rappelling. Exploring the fort's historical structures, bastions, and temples is also a popular activity among tourists.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some of the notable attractions within Purandar Fort include the Dilli Darwaja, the Kedareshwar Temple, and the statue of Chhatrapati Shivaji Maharaj. The fortifications, bastions, and cannons are also worth exploring. The fort offers panoramic views of the surrounding landscape and is an ideal spot for photography.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Purandar Fort is located approximately 50 kilometers from Pune city in the Pune district of Maharashtra. Visitors can reach the base village of Narayanpur by road from Pune. From Narayanpur, a trekking trail leads to the fort, which takes about 2-3 hours to complete. It is advisable to hire a local guide for the trek.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Purandar Fort is during the post-monsoon season (October to February) when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the summer months (March to May) as the weather can be hot and humid. Trekking trails may become slippery during the monsoon season (June to September).</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no entry fee to visit Purandar Fort. Visitors can explore the fort and its surroundings freely. However, it is essential to respect the historical structures and natural environment during the visit.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Since Purandar Fort is located in a remote area, there are limited accommodation options available nearby. Visitors can opt for camping near the fort or stay in homestays and guesthouses in nearby villages like Narayanpur. It is advisable to carry camping gear and other essentials for an overnight stay.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.97301495271272,18.27895503136009 ],
+            zoom: 14.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.97301495271272,18.27895503136009 ])
+            .addTo(map);
+    </script>
+
+</body>
+</html>

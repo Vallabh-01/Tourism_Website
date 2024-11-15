@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background:url(new.jpg);
+    height: 100vh;
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.container {
+    max-width: 300px;
+    margin: 50px;
+    background-color: #334550;
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    /* add this to make the container a flex container */
+    flex-wrap: wrap;
+    /* add this to allow the image to wrap to the next line if necessary */
+    opacity: 80%;
+}
+
+h5 {
+    color: #ffffff;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    color: #FDE8E9;
+}
+
+h1{
+    text-align:left;
+    color: #FDE8E9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #33658A;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup.show {
+    display: block;
+}
+
+#account {
+    flex: 1;
+    /* add this to make the form take up the available space */
+}
+a {
+    color: rgb(204, 204, 228); /* Change the color to your desired color */
+}
+
+/* CSS for hyperlink hover color */
+a:hover {
+    color: #FDE8E9; /* Change the color to your desired hover color */
+}

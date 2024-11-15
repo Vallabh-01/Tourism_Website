@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahabaleshwar Information</title>
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+  <section id="mahabaleshwar">
+    <div class="container">
+      <img src="Mahabaleshwar.jpeg" alt="Mahabaleshwar Image" class="main-image">
+      <div class="content">
+        <h2>Mahabaleshwar</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>Mahabaleshwar is renowned for its stunning natural beauty, which includes lush green forests, majestic
+            hills, and beautiful valleys. This hill station in the Western Ghats of Maharashtra is famous for its
+            strawberries, which are celebrated during the annual Strawberry Festival. Additionally, Mahabaleshwar is
+            known for its pleasant climate, historic temples, and captivating viewpoints that offer breathtaking vistas
+            of the surrounding landscape.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Mahabaleshwar can indulge in a variety of activities that cater to different interests. Nature
+            enthusiasts can enjoy trekking, hiking, and boating on the serene Venna Lake. The area is also perfect for
+            horse riding and enjoying leisurely walks through the lush greenery. Adventure seekers can explore the
+            numerous trails and waterfalls, while those looking for relaxation can visit the many viewpoints to take in
+            the scenic beauty. Mahabaleshwar also offers opportunities for shopping, with its markets selling fresh
+            strawberries, jams, and other local products.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>Mahabaleshwar is home to several attractions that draw tourists year-round. The Arthur’s Seat viewpoint is
+            known for its panoramic views of the surrounding valleys and the Savitri River. The Pratapgad Fort, a
+            historic fort built by Shivaji Maharaj, offers a glimpse into the region’s rich history. Other notable
+            places include the Mahabaleshwar Temple, dedicated to Lord Shiva, and the Mapro Garden, famous for its
+            strawberry products and beautiful gardens. Venna Lake is a popular spot for boating, while the Lingmala
+            Waterfall offers a refreshing experience amidst nature.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Mahabaleshwar:</h3>
+          <p>Reaching Mahabaleshwar is convenient due to its well-connected transportation network. By road, it is
+            easily accessible via the Mumbai-Pune Expressway and NH 4, making it a popular weekend destination for
+            people from Mumbai and Pune. Regular buses and private cabs are also available from these cities. For those
+            preferring rail travel, the nearest railway station is in Satara, approximately 60 kilometers away, which is
+            well-connected to major cities. The nearest airports are in Pune, around 120 kilometers away, and Mumbai,
+            approximately 260 kilometers away, offering domestic and international flights.</p>
+        </div>
+        <div class="info">
+          <h3>Location</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [73.64290862192887, 17.929764273091674], // Coordinates for Lonavala
+      zoom: 12.5
+    });
+
+    var marker = new mapboxgl.Marker()
+      .setLngLat([73.64290862192887, 17.929764273091674])
+      .addTo(map);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddhivinayak Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="siddhivinayak-temple">
+    <div class="container">
+      <img src="sidhivinayak.jpg" alt="Siddhivinayak Temple Image" class="main-image">
+      <div class="content">
+        <h2>Siddhivinayak Temple</h2>
+        <div class="info">
+          <h3>About Siddhivinayak Temple:</h3>
+          <p>The Siddhivinayak Temple, located in Prabhadevi, Mumbai, is one of the most revered and visited temples in India, dedicated to Lord Ganesha. Known for fulfilling the wishes of its devotees, the temple attracts millions of worshippers each year, including celebrities and dignitaries.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Siddhivinayak Temple was originally built in 1801 by Laxman Vithu and Deubai Patil. The temple has undergone significant renovations and expansions over the years to accommodate the growing number of devotees. The idol of Lord Ganesha, adorned with intricate carvings and gold-plated features, is believed to be self-manifested (Swayambhu).</p>
+        </div>
+        <div class="info">
+          <h3>Temple Complex:</h3>
+          <p>The temple complex includes the main shrine, a Hanuman temple, a meditation hall, and several smaller shrines dedicated to other deities. The temple also features a spacious courtyard, a serene garden, and facilities for devotees such as prasad (offering) counters, a bookshop, and a donation center.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting the Siddhivinayak Temple engage in various devotional activities, including darshan (viewing) of Lord Ganesha's idol, offering prayers, and participating in the aarti (ritual worship). The temple conducts regular bhajans (devotional songs), kirtans (hymns), and spiritual discourses, creating a vibrant and spiritual atmosphere.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to the Siddhivinayak Temple can enjoy a variety of local delicacies and vegetarian cuisine in the vicinity. The area around the temple is known for its street food, including dishes like vada pav, pav bhaji, and puran poli (sweet flatbread). There are also several restaurants offering traditional Maharashtrian thalis and other regional specialties.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Mumbai offers a wide range of accommodation options for visitors to the Siddhivinayak Temple, from budget hotels and guesthouses to luxury hotels and serviced apartments. Many hotels are located within a short distance from the temple, providing convenient access for devotees and tourists alike.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Siddhivinayak Temple is located in Prabhadevi, Mumbai, Maharashtra. It is easily accessible by road and is well-connected to other parts of the city. The nearest railway stations are Dadar and Elphinstone Road, both of which are within a short distance from the temple. Visitors can also reach the temple via public transportation such as buses, taxis, and auto-rickshaws.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.8304572389214, 19.01693021216661],  // Coordinates for Siddhivinayak Temple, Mumbai
+          zoom: 16.5
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.8304572389214, 19.01693021216661])
+          .addTo(map);
+  </script>
+</body>
+</html>

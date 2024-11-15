@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korigad Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Korigad Fort</h1>
+        <img src="korigad.jpg" alt="Korigad Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Korigad Fort is famous for its scenic beauty, trekking opportunities, and ancient temples dating back to the Peshwa era. The fort offers panoramic views of the surrounding landscapes, including the lush greenery and nearby Amby Valley.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Korigad Fort can engage in trekking, which is relatively easy and suitable for beginners. The fort's expansive flat top is perfect for picnicking and relaxing while enjoying the scenic views. Photography enthusiasts can capture the beauty of the fort and its surroundings. Additionally, exploring the ancient temples and ruins within the fort provides a glimpse into its historical significance.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some of the notable attractions within Korigad Fort include the ancient Koraidevi Temple, the two large ponds, and the fort's bastions offering spectacular views. The fort walls and the main entrance gate are also points of interest. The nearby Amby Valley and the beautiful Pawna Lake are worth visiting as well.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Korigad Fort is located near Lonavala in Maharashtra. It is accessible by road from Lonavala, which is well-connected by road and rail to major cities like Mumbai and Pune. From Lonavala, one can hire a taxi or take a local bus to reach the base village of Peth Shahpur. The trekking trail to the fort starts from this village.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Korigad Fort is during the monsoon season (June to September) when the surroundings are lush and green, and the weather is pleasant. The winter months from October to February are also ideal for trekking and outdoor activities. It is advisable to avoid visiting during the summer months (March to May) due to the hot and dry weather.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no formal entry fee to visit Korigad Fort. Visitors can explore the fort and its surroundings freely. However, it is advisable to check with local authorities or guides for any updates on charges or guided tour fees.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Accommodation options near Korigad Fort include various guesthouses, hotels, and resorts in Lonavala. Visitors can find a range of budget and luxury options to suit their preferences and budgets. Amby Valley also offers luxury stay options for those looking for a premium experience. It is advisable to book accommodation in advance, especially during weekends and peak tourist seasons.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.38618743435316, 18.619464302303204],
+            zoom: 13.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.38618743435316, 18.619464302303204])
+            .addTo(map);
+    </script>
+
+</body>
+</html>

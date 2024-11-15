@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shani Shingnapur Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="shani-shingnapur">
+    <div class="container">
+      <img src="download.jpeg" alt="Shani Shingnapur Image" class="main-image">
+      <div class="content">
+        <h2>Shani Shingnapur</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>Shani Shingnapur, located in Maharashtra, is famous for its temple dedicated to Shani, the deity associated with the planet Saturn. The village is renowned for its unique practice of having no doors or locks on houses, as it is believed that the deity protects the village from theft and crime. The temple attracts devotees from all over the country who come to seek blessings and protection from Shani Dev.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Shani Shingnapur can engage in various religious activities, including offering prayers and performing rituals at the Shani temple. Participating in the daily aarti and other ceremonies provides a spiritual experience. Exploring the village and witnessing the unique doorless houses is also an interesting activity. Photography enthusiasts can capture the essence of this unique village and its serene environment.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>Besides the Shani Shingnapur temple, there are several other attractions nearby. The Shirdi Sai Baba Temple, located around 70 kilometers away, is another major pilgrimage site. Nashik, known for its religious significance and wine production, is also a popular destination. The Trimbakeshwar Temple in Nashik, dedicated to Lord Shiva, is one of the twelve Jyotirlingas and is highly revered by devotees.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Shani Shingnapur:</h3>
+          <p>Shani Shingnapur is well-connected by road and can be easily reached from major cities in Maharashtra. The nearest airport is in Aurangabad, approximately 84 kilometers away. The nearest railway station is in Ahmednagar, around 35 kilometers from the village. Regular buses and taxis are available from these locations to Shani Shingnapur.</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>The village of Shani Shingnapur is steeped in legend and religious significance. According to folklore, a black stone, believed to be the manifestation of Lord Shani, emerged from the earth and instructed the villagers to install it without a roof or temple structure. Since then, the deity has been worshipped in an open-air shrine. The belief in Lord Shani's protection is so strong that there are no doors or locks on houses, shops, and even banks in the village.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>In addition to Shani Shingnapur, visitors can explore other nearby attractions. The town of Shirdi, famous for the Shirdi Sai Baba Temple, is a major pilgrimage site. The Ellora Caves, a UNESCO World Heritage site, is known for its rock-cut temples and intricate carvings. The Ajanta Caves, another UNESCO site, are renowned for their Buddhist rock-cut caves and ancient paintings. Visitors can also explore the city of Ahmednagar, known for its historical forts and tombs.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>Shani Shingnapur and its surrounding regions reflect the rich cultural heritage of Maharashtra. The local culture is deeply rooted in religious traditions and practices. Visitors can experience the warmth and hospitality of the local people, who are known for their devotion and simplicity. The cuisine of Maharashtra, with its diverse flavors and dishes, can be savored in the local eateries. Festivals like Diwali, Ganesh Chaturthi, and Makar Sankranti are celebrated with great enthusiasm and offer a glimpse into the local customs and traditions.</p>
+        </div>
+        <div class="info">
+          <h3>Tips for Visitors:</h3>
+          <p>When visiting Shani Shingnapur, it's advisable to dress modestly and respectfully, as it is a religious site. Carry sufficient cash, as there are limited ATMs in the village. If visiting during the summer months, carry water and stay hydrated, as the region can get quite hot. It's also recommended to plan your visit in the early morning or late afternoon to avoid the midday heat. Respect the local customs and practices, especially the unique tradition of doorless houses.</p>
+        </div>
+        <div class="info">
+            <h3>Location</h3>
+            <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [74.8577838630353, 19.381708239668207],  // Coordinates for Shani Shingnapur
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([74.8577838630353, 19.381708239668207])
+          .addTo(map);
+  </script>
+</body>
+</html> 

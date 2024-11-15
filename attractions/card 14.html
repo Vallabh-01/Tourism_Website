@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhimashankar Wildlife Sanctuary Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="bhimashankar-wildlife-sanctuary">
+    <div class="container">
+      <img src="Bhimashankar.jpeg" alt="Bhimashankar Wildlife Sanctuary Image" class="main-image">
+      <div class="content">
+        <h2>Bhimashankar Wildlife Sanctuary</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Bhimashankar Wildlife Sanctuary is a protected area located in the Western Ghats of Maharashtra, India. Established in 1984, the sanctuary spans an area of approximately 131 square kilometers and is renowned for its rich biodiversity, dense forests, and the presence of the endemic Indian Giant Squirrel.</p>
+        </div>
+        <div class="info">
+          <h3>Flora and Fauna:</h3>
+          <p>The sanctuary is home to a diverse range of flora and fauna. The forested area includes species such as mango, jamun, hirda, and various medicinal plants. Faunal species include the Indian Giant Squirrel, leopards, sambar deer, barking deer, wild boar, and a variety of bird species. The sanctuary also supports a number of reptiles and amphibians.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Bhimashankar Wildlife Sanctuary offers several attractions for nature enthusiasts and wildlife lovers:</p>
+          <ul>
+            <li><strong>Bhimashankar Temple:</strong> An ancient temple dedicated to Lord Shiva, located within the sanctuary.</li>
+            <li><strong>Gupta Bhimashankar:</strong> A lesser-known site with a hidden waterfall and serene surroundings.</li>
+            <li><strong>Hanuman Lake:</strong> A tranquil lake frequented by various bird species.</li>
+            <li><strong>Nature Trails:</strong> Several trails and trekking routes offering opportunities for wildlife spotting and birdwatching.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Bhimashankar Wildlife Sanctuary can engage in various activities such as wildlife safaris, birdwatching, trekking, and nature walks. The sanctuary provides a serene environment for photography and exploring the natural beauty of the Western Ghats.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Bhimashankar Wildlife Sanctuary is from October to March, when the weather is pleasant and conducive for outdoor activities. The monsoon season (June to September) brings lush greenery and rejuvenated waterfalls, but the terrain may be slippery and challenging for trekking.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Bhimashankar Wildlife Sanctuary is located about 125 kilometers from Pune and 220 kilometers from Mumbai. The nearest railway station is Pune, from where visitors can take buses or taxis to reach the sanctuary. The sanctuary is well-connected by road and can be accessed by private vehicles as well.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Bhimashankar Wildlife Sanctuary include forest rest houses, guesthouses, and resorts. Booking in advance is recommended, especially during peak tourist seasons. Camping is also a popular option for those seeking an immersive nature experience.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.55657917775119, 19.0747],  // Coordinates for Bhimashankar Wildlife Sanctuary, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.55657917775119, 19.0747])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

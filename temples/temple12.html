@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aundha Nagnath Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="aundha-nagnath-temple">
+    <div class="container">
+      <img src="nagnath.webp" alt="Aundha Nagnath Temple Image" class="main-image">
+      <div class="content">
+        <h2>Aundha Nagnath Temple</h2>
+        <div class="info">
+          <h3>About Aundha Nagnath Temple:</h3>
+          <p>Aundha Nagnath Temple, located in Hingoli district, Maharashtra, is one of the twelve Jyotirlingas in India. This ancient temple is dedicated to Lord Shiva and is an important pilgrimage site for devotees from all over the country.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Aundha Nagnath Temple is believed to have been constructed by the Yadava dynasty in the 13th century. It is considered one of the oldest temples in the region and holds significant religious importance. The temple has survived various invasions and has been restored several times over the centuries.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The temple showcases exquisite Hemadpanthi architectural style, characterized by its black stone structure and intricate carvings. The temple complex includes a main sanctum, various smaller shrines, and a spacious courtyard. The detailed sculptures and artistic pillars add to the temple's architectural splendor.</p>
+        </div>
+        <div class="info">
+          <h3>Religious Significance:</h3>
+          <p>Aundha Nagnath Temple is one of the twelve Jyotirlingas, representing Lord Shiva's infinite nature. Devotees believe that visiting the temple and offering prayers here brings blessings and spiritual fulfillment. The temple is also associated with several legends and myths from Hindu scriptures.</p>
+        </div>
+        <div class="info">
+          <h3>Festivals:</h3>
+          <p>The temple celebrates several Hindu festivals with great enthusiasm and devotion. The Maha Shivaratri festival, dedicated to Lord Shiva, is one of the most important events at the temple, attracting thousands of devotees. Other festivals such as Shravan Somvar and Kartik Purnima are also celebrated with special rituals and ceremonies.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Aundha Nagnath Temple can enjoy traditional Maharashtrian cuisine in the nearby eateries and food stalls. Popular dishes include puran poli, vada pav, and bhakri. The temple's prasad (sacred offering) is also distributed to devotees and is considered highly auspicious.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Aundha Nagnath Temple, including guesthouses, lodges, and budget hotels. Pilgrims can find comfortable and affordable lodging options to suit their needs. The temple trust also provides basic facilities for pilgrims.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>While visiting Aundha Nagnath Temple, pilgrims can also explore nearby attractions such as the Siddheshwar Dam, which offers scenic views and a peaceful environment. The Hingoli city itself has several historical sites and temples that visitors can explore during their stay.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Aundha Nagnath Temple is located in the Hingoli district of Maharashtra. The temple is well-connected by road and is easily accessible from nearby cities such as Nanded and Parbhani. Visitors can reach the temple via private vehicles, state transport buses, or taxis.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [77.04143054561446, 19.537113504029257],  // Coordinates for Aundha Nagnath Temple, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([77.04143054561446, 19.537113504029257])
+          .addTo(map);
+  </script>
+</body>
+</html> 

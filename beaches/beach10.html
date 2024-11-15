@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velneshwar Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="velneshwar-beach">
+    <div class="container">
+      <img src="Velneshwar.jpeg" alt="Velneshwar Beach Image" class="main-image">
+      <div class="content">
+        <h2>Velneshwar Beach</h2>
+        <div class="info">
+          <h3>About Velneshwar Beach:</h3>
+          <p>Velneshwar Beach is a picturesque coastal destination located in the Ratnagiri district of Maharashtra, India. Known for its tranquil ambiance, pristine shoreline, and natural beauty, Velneshwar Beach is a popular getaway for those seeking relaxation and solitude.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Velneshwar Beach offers visitors the perfect setting for a peaceful retreat amidst nature. The beach is ideal for swimming, sunbathing, and leisurely walks along the shore. Visitors can also explore the nearby temples and enjoy breathtaking views of the Arabian Sea.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Velneshwar Beach that visitors can explore. The Velneshwar Temple, dedicated to Lord Shiva, is a major pilgrimage site and is located close to the beach. The scenic Hedvi Beach and Guhagar Beach are also popular tourist spots.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Velneshwar is known for its delicious seafood dishes. Visitors can savor a variety of fresh seafood delicacies at the beachside shacks and restaurants lining the coastline. From fish thalis to prawn curry, there are plenty of options to tantalize your taste buds.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are limited accommodation options available near Velneshwar Beach, including guesthouses and homestays. Visitors can also opt to stay in nearby towns such as Guhagar or Ratnagiri, which offer a wider range of accommodation choices.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Velneshwar celebrates various festivals and cultural events throughout the year. The Maha Shivratri festival is a major event celebrated with great fervor at the Velneshwar Temple, featuring traditional rituals, music, and cultural performances.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Velneshwar Beach is located in the Ratnagiri district of Maharashtra, approximately 300 kilometers from Mumbai. The beach is easily accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Velneshwar Beach via public transportation such as buses or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.2086237506652, 17.3807457583428],  // Coordinates for Velneshwar Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.2086237506652, 17.3807457583428])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

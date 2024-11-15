@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trimbakeshwar Temple, Nashik</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="trimbakeshwar-temple">
+    <div class="container">
+      <img src="trimbakeshwar.jpg" alt="Trimbakeshwar Temple Image" class="main-image">
+      <div class="content">
+        <h2>Trimbakeshwar Temple, Nashik</h2>
+        <div class="info">
+          <h3>About Trimbakeshwar Temple:</h3>
+          <p>The Trimbakeshwar Temple, located in the town of Trimbak near Nashik, Maharashtra, is one of the twelve Jyotirlingas in India and holds immense religious significance for Hindus. Dedicated to Lord Shiva, the temple is known for its unique lingam, which features three faces embodying Lord Brahma, Lord Vishnu, and Lord Shiva.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Trimbakeshwar Temple was constructed by the Maratha ruler Nana Saheb Peshwa in the 18th century. It is believed that the temple is situated at the source of the sacred Godavari River, which adds to its spiritual importance. The temple has been a major pilgrimage site for centuries and continues to attract devotees from across the country.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The architecture of the Trimbakeshwar Temple is a classic example of Hemadpanthi style, characterized by its black stone construction and intricate carvings. The temple's sanctum sanctorum houses the unique three-faced lingam, and the structure is adorned with numerous sculptures and reliefs depicting Hindu deities and mythological scenes.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting the Trimbakeshwar Temple participate in various rituals and ceremonies, including the Rudrabhishek, a powerful ritual performed to please Lord Shiva. The temple is especially crowded during the festivals of Mahashivratri and Shravan month, when devotees undertake a holy pilgrimage known as the "Trimbak Pradakshina."</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Trimbakeshwar can savor traditional Maharashtrian cuisine, which includes dishes like Puran Poli, Misal Pav, and Batata Vada. The local eateries and food stalls offer a variety of vegetarian meals, providing a taste of the region's culinary heritage.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available in and around Trimbakeshwar, ranging from budget lodges to mid-range hotels. Many of these accommodations provide basic amenities and are located close to the temple, ensuring convenience for pilgrims. It is advisable to book accommodations in advance, especially during festival times.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Trimbakeshwar is surrounded by several attractions that visitors can explore. The Anjaneri Hills, believed to be the birthplace of Lord Hanuman, offer trekking opportunities and panoramic views. The Brahmagiri Hill, the origin of the Godavari River, is another significant site. Nashik city, known for its vineyards and the Kumbh Mela, is also nearby and worth a visit.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Trimbakeshwar Temple is located approximately 30 kilometers from Nashik city in Maharashtra. The temple is well-connected by road, and visitors can reach it via private vehicles, taxis, or buses. The nearest railway station is Nashik Road Railway Station, and the nearest airport is in Nashik.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.530705, 19.932274],  // Coordinates for Trimbakeshwar Temple, Nashik
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.530705, 19.932274])
+          .addTo(map);
+  </script>
+</body>
+</html>

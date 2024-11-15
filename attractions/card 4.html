@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajanta and Ellora Caves Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="ajanta-ellora-caves">
+    <div class="container">
+      <img src="ellora.jpg" alt="Ajanta and Ellora Caves Image" class="main-image">
+      <div class="content">
+        <h2>Ajanta and Ellora Caves</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>Ajanta and Ellora Caves are renowned for their extraordinary rock-cut caves and ancient art. Located near Aurangabad in Maharashtra, these UNESCO World Heritage sites are famous for their intricate sculptures, frescoes, and architectural marvels. The Ajanta Caves, dating back to the 2nd century BCE, are primarily Buddhist and feature exquisite paintings and carvings that depict the life of Buddha. The Ellora Caves, spanning the 6th to 11th centuries CE, showcase a unique blend of Hindu, Buddhist, and Jain temples, with the Kailasa Temple being the most notable for its grand scale and detailed craftsmanship.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Ajanta and Ellora Caves can engage in a variety of activities that immerse them in the historical and cultural significance of these sites. Guided tours are highly recommended to understand the history and artistry behind the caves. Photography enthusiasts can capture the intricate details and expansive landscapes surrounding the caves. Additionally, hiking around the hills and exploring the nearby archaeological sites can be a rewarding experience. There are also local markets where visitors can purchase souvenirs and handicrafts reflecting the rich heritage of the region.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>In addition to the Ajanta and Ellora Caves, several other attractions in the region are worth visiting. The Daulatabad Fort, known for its formidable structure and strategic location, offers panoramic views and a glimpse into medieval Indian history. Bibi Ka Maqbara, often referred to as the "Mini Taj Mahal," is another must-visit monument in Aurangabad. The Aurangabad Caves, though less famous, are also noteworthy for their Buddhist sculptures and stupas. Grishneshwar Temple, one of the twelve Jyotirlingas dedicated to Lord Shiva, is located near the Ellora Caves and attracts many devotees.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Ajanta and Ellora Caves:</h3>
+          <p>Reaching Ajanta and Ellora Caves is relatively straightforward due to their proximity to Aurangabad, which serves as the main hub for travelers. Aurangabad Airport offers flights connecting major cities like Mumbai, Delhi, and Hyderabad. The city is also well-connected by rail, with trains from Mumbai, Pune, and Hyderabad. By road, Aurangabad can be accessed via national highways, and regular bus services are available from nearby cities. From Aurangabad, tourists can hire taxis or use local bus services to reach both Ajanta (around 100 kilometers away) and Ellora (about 30 kilometers away).</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>The Ajanta and Ellora Caves are significant for their historical and religious importance. The Ajanta Caves were rediscovered in 1819 by a British officer during a hunting expedition. These caves were used as a retreat by Buddhist monks and contain a wealth of information about the life and teachings of Buddha. The Ellora Caves illustrate the spirit of tolerance that was characteristic of ancient India. They demonstrate the coexistence of different religions through their temples and monasteries that belong to Buddhism, Hinduism, and Jainism.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>In addition to the caves, visitors can explore other nearby attractions. The Ellora Caves are close to the Aurangabad district, where travelers can visit the famous Panchakki, an ancient water mill, and the Tomb of Aurangzeb. The city of Aurangabad itself offers historical sites, museums, and vibrant markets that provide a glimpse into the local culture and history.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>The local culture around Ajanta and Ellora is rich and diverse. The region is known for its traditional crafts, including Paithani silk sarees, Himroo fabric, and Bidriware. Visitors can also experience the local cuisine, which features a variety of flavors and dishes unique to Maharashtra. The cultural festivals celebrated in this region, such as Ganesh Chaturthi and Diwali, offer a colorful and immersive experience for tourists.</p>
+        </div>
+        <div class="info">
+          <h3>Tips for Visitors:</h3>
+          <p>When visiting Ajanta and Ellora Caves, it's advisable to wear comfortable clothing and footwear, as exploring the sites involves a fair amount of walking and climbing. Carrying a water bottle and some snacks is recommended, as there are limited food options within the cave complexes. Hiring a guide can greatly enhance the experience by providing detailed information about the history and significance of the caves. Lastly, it's important to respect the cultural and historical heritage of the sites by not touching or damaging the sculptures and paintings.</p>
+        </div>
+        <div class="info">
+            <h3>Location</h3>
+            <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [75.70098820752769, 20.552448245462823],  // Coordinates for Ajanta Caves
+          zoom: 13
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([75.70098820752769, 20.552448245462823])
+          .addTo(map);
+  </script>
+</body>
+</html> 

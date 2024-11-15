@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grishneshwar Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="grishneshwar-temple">
+    <div class="container">
+      <img src="grishneshwar.jpg" alt="Grishneshwar Temple Image" class="main-image">
+      <div class="content">
+        <h2>Grishneshwar Temple</h2>
+        <div class="info">
+          <h3>About Grishneshwar Temple:</h3>
+          <p>Grishneshwar Temple, located near Ellora in Maharashtra, India, is one of the twelve Jyotirlinga shrines dedicated to Lord Shiva. The temple is a revered pilgrimage site and holds immense religious significance. The current structure was rebuilt in the 18th century by Queen Ahilyabai Holkar of Indore.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The history of Grishneshwar Temple dates back to ancient times and has been referenced in various Hindu scriptures. The temple has undergone several renovations and reconstructions due to damage over the centuries. It is believed that worshiping at this Jyotirlinga can absolve devotees of their sins and grant them salvation.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The Grishneshwar Temple showcases Maratha architectural style with its intricate carvings and sculptures. The temple is built using red volcanic rock and features a five-tier shikhara (temple tower). The sanctum sanctorum houses the revered Jyotirlinga, which is adorned with flowers and ornaments during worship.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting Grishneshwar Temple can participate in various rituals and ceremonies. Daily aarti and abhishekam (ritual bathing of the linga) are performed by the temple priests. The temple also celebrates major Hindu festivals, especially Maha Shivaratri, with grand fervor and devotion, attracting thousands of pilgrims.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to the Grishneshwar Temple can enjoy traditional Maharashtrian cuisine at nearby eateries. Popular dishes include Puran Poli, Sabudana Khichdi, and various types of bhakri. The local food reflects the rich culinary heritage of the region and offers both vegetarian and non-vegetarian options.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near the Grishneshwar Temple, ranging from budget lodges to mid-range hotels. Many of these accommodations provide basic amenities and are located close to the temple, ensuring convenience for pilgrims. It is advisable to book accommodations in advance, especially during peak pilgrimage seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>The Grishneshwar Temple is located near several important attractions. The Ellora Caves, a UNESCO World Heritage Site, are just a short distance away and offer a glimpse into ancient rock-cut architecture and art. The Daulatabad Fort, known for its strategic design and historical significance, is another nearby attraction worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Grishneshwar Temple is located in the village of Verul, approximately 30 kilometers from Aurangabad, Maharashtra. The temple is well-connected by road, and visitors can reach it via private vehicles, taxis, or buses. The nearest railway station is Aurangabad Railway Station, and the nearest airport is Aurangabad Airport.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [75.16977317451476, 20.02503441479931],  // Coordinates for Grishneshwar Temple
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([75.16977317451476, 20.02503441479931])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panchgani Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="panchgani">
+    <div class="container">
+      <img src="Panchgani.jpeg" alt="Panchgani Image" class="main-image">
+      <div class="content">
+        <h2>Panchgani</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Panchgani is a picturesque hill station located in the Satara district of Maharashtra, India. Situated at an elevation of about 1,334 meters above sea level, it is renowned for its pleasant climate, breathtaking views, and colonial-era charm. The name "Panchgani" translates to "land of five hills," indicative of the five hills that surround the area, providing stunning vistas.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Panchgani offers several attractions for nature lovers and tourists:</p>
+          <ul>
+            <li><strong>Table Land:</strong> A vast volcanic plateau, known to be the second longest in Asia, offering panoramic views of the valleys and nearby towns.</li>
+            <li><strong>Sydney Point:</strong> A popular viewpoint offering stunning views of the Krishna Valley, Dhom Dam, and the hill ranges of Pandavgad and Mandhardeo.</li>
+            <li><strong>Parsi Point:</strong> Another scenic viewpoint known for its picturesque views of the Dhom Dam backwaters and lush green valley.</li>
+            <li><strong>Devil's Kitchen:</strong> A historic site with fascinating caves believed to have been used by the Pandavas during their exile.</li>
+            <li><strong>Mapro Garden:</strong> A popular garden known for its strawberry produce, offering a variety of strawberry-based products and refreshments.</li>
+            <li><strong>Lingmala Waterfall:</strong> A beautiful waterfall located a short drive from Panchgani, offering a serene and refreshing experience.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Panchgani can engage in various activities such as trekking, paragliding, sightseeing, and exploring nature trails. The hill station's serene environment and pleasant weather make it an ideal destination for outdoor activities and relaxation.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Panchgani is from September to May. During this period, the weather is pleasant and suitable for outdoor activities. The monsoon season (June to August) brings heavy rainfall, which enhances the natural beauty but can also cause travel difficulties.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Panchgani is well-connected by road and rail. The nearest railway station is Wathar, located about 45 kilometers away. Pune railway station is also convenient, located around 100 kilometers from Panchgani. The hill station is approximately 250 kilometers from Mumbai and 100 kilometers from Pune, making it accessible by car or bus.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Panchgani offers a range of accommodation options, including resorts, hotels, and guesthouses. Visitors can choose from various lodging options based on their preferences and budget. Advance booking is recommended, especially during peak tourist seasons.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.79715926234077, 17.923845212266905],  // Coordinates for Panchgani, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.79715926234077, 17.923845212266905])
+          .addTo(map);
+  </script>
+</body>
+</html>

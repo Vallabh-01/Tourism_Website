@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarkarli Beach</title>
+    <link rel="stylesheet" href="beach.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <section id="tarkarli-beach">
+        <div class="container">
+            <img src="tarkarli.jpeg" alt="Tarkarli Beach Image" class="main-image">
+            <div class="content">
+                <h2>Tarkarli Beach</h2>
+                <div class="info">
+                    <h3>About Tarkarli Beach:</h3>
+                    <p>Tarkarli Beach is a pristine beach located along the Konkan coast in Maharashtra, India. With its
+                        golden sands, crystal-clear waters, and lush green surroundings, Tarkarli Beach is renowned for
+                        its natural beauty and tranquil ambiance, making it a popular destination for beach lovers and
+                        water sports enthusiasts.</p>
+                </div>
+                <div class="info">
+                    <h3>Attractions:</h3>
+                    <p>Tarkarli Beach offers a variety of attractions and activities for visitors. Apart from swimming
+                        and sunbathing, visitors can enjoy water sports such as snorkeling, scuba diving, and
+                        parasailing. The beach is also known for its vibrant marine life, including coral reefs and
+                        colorful fish.</p>
+                </div>
+                <div class="info">
+                    <h3>Nearby Attractions:</h3>
+                    <p>There are several attractions near Tarkarli Beach that visitors can explore. The historic
+                        Sindhudurg Fort, built by Chhatrapati Shivaji Maharaj, is located just offshore and is
+                        accessible by boat. The backwaters of the Karli River offer opportunities for boating and
+                        birdwatching.</p>
+                </div>
+                <div class="info">
+                    <h3>Local Cuisine:</h3>
+                    <p>Tarkarli is known for its delicious seafood and Malvani cuisine. Visitors can savor fresh seafood
+                        delicacies such as fish thali, crab masala, and prawn curry at the numerous beachside shacks and
+                        restaurants. The area is also famous for its traditional Malvani sweets like ukdiche modak and
+                        amba barfi.</p>
+                </div>
+                <div class="info">
+                    <h3>Accommodation:</h3>
+                    <p>There are several accommodation options available near Tarkarli Beach, ranging from beach resorts
+                        to homestays. Visitors can choose from beachfront cottages offering panoramic views of the
+                        Arabian Sea or eco-friendly resorts nestled amidst coconut groves. Advance booking is
+                        recommended, especially during peak tourist seasons.</p>
+                </div>
+                <div class="info">
+                    <h3>Local Festivals:</h3>
+                    <p>Tarkarli hosts several festivals and cultural events throughout the year, offering visitors a
+                        glimpse into local traditions and customs. The Ramnavmi Jatra, celebrated during the Hindu
+                        festival of Ramnavmi, is a major event featuring colorful processions, traditional music, and
+                        dance performances.</p>
+                </div>
+                <div class="info">
+                    <h3>Location:</h3>
+                    <p>Tarkarli Beach is located in the Sindhudurg district of Maharashtra, approximately 550 kilometers
+                        from Mumbai. The beach is easily accessible by road and is well-connected to major cities and
+                        towns in Maharashtra. Visitors can reach Tarkarli Beach via private vehicles or state transport
+                        buses.</p>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.48946909036307, 16.014653836543356],  // Coordinates for Tarkarli Beach, Maharashtra
+            zoom: 14
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.48946909036307, 16.014653836543356])
+            .addTo(map);
+    </script>
+</body>
+
+</html>, 

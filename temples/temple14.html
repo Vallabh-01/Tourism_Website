@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhimashankar Mandir</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="bhimashankar-mandir">
+    <div class="container">
+      <img src="bhimashankar.jpg" alt="Bhimashankar Mandir Image" class="main-image">
+      <div class="content">
+        <h2>Bhimashankar Mandir</h2>
+        <div class="info">
+          <h3>About Bhimashankar Mandir:</h3>
+          <p>Bhimashankar Mandir, located in the Sahyadri hills of Maharashtra, is one of the twelve Jyotirlinga shrines dedicated to Lord Shiva. The temple is surrounded by lush greenery and is a popular pilgrimage site as well as a destination for nature lovers.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The temple is believed to have been built in the 13th century and has undergone several renovations over the centuries. The current structure is a blend of Nagara style and Indo-Aryan architecture. It holds significant importance in Hindu mythology and is associated with the legend of Lord Shiva defeating the demon Tripurasura.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The Bhimashankar temple showcases the architectural brilliance of the ancient times. The temple complex features intricate carvings, a shikhara (spire), and the sanctum sanctorum housing the Jyotirlinga. The serene environment and ancient structure create a spiritually uplifting experience for devotees.</p>
+        </div>
+        <div class="info">
+          <h3>Religious Significance:</h3>
+          <p>Bhimashankar is considered a highly sacred site for devotees of Lord Shiva. Pilgrims believe that visiting the Jyotirlinga and offering prayers can absolve them of sins and grant them spiritual liberation. The temple is also a starting point for several treks into the surrounding hills and forests.</p>
+        </div>
+        <div class="info">
+          <h3>Festivals:</h3>
+          <p>Mahashivaratri is the most significant festival celebrated at Bhimashankar Mandir. Devotees from all over the country flock to the temple to participate in the grand festivities, which include special prayers, rituals, and cultural performances. Other important festivals include Shravan Mondays and Kartik Purnima.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to Bhimashankar can enjoy traditional Maharashtrian cuisine at local eateries and food stalls. Popular dishes include bhakri, pithla, vada pav, and puran poli. Many stalls also offer fresh fruits and locally made snacks.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options near Bhimashankar Mandir, ranging from budget lodges to comfortable hotels and guesthouses. For those seeking a closer connection with nature, there are also campsites and eco-resorts in the vicinity.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Besides the temple, visitors can explore nearby attractions such as the Bhimashankar Wildlife Sanctuary, which is home to a variety of flora and fauna including the Indian Giant Squirrel. The Gupt Bhimashankar temple, Hanuman Lake, and several trekking trails offer additional opportunities for adventure and exploration.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Bhimashankar Mandir is located in the Pune district of Maharashtra, approximately 110 kilometers from Pune city. The temple is accessible by road, with regular bus and taxi services from Pune and other nearby towns. The nearest railway station is Pune Junction, and the nearest airport is Pune International Airport.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.53606265133139, 19.07199488880283],  // Coordinates for Bhimashankar Mandir, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.53606265133139, 19.07199488880283])
+          .addTo(map);
+  </script>
+</body>
+</html> 

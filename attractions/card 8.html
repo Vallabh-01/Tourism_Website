@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjay Gandhi National Park Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="sanjay-gandhi-national-park">
+    <div class="container">
+      <img src="Sanjay Gandhi National Park.jpeg" alt="Sanjay Gandhi National Park Image" class="main-image">
+      <div class="content">
+        <h2>Sanjay Gandhi National Park</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>Sanjay Gandhi National Park, located in the bustling city of Mumbai, Maharashtra, is a renowned green oasis amidst the urban landscape. It is famous for its rich biodiversity, housing a variety of flora and fauna, and offers a tranquil escape for nature lovers and adventure enthusiasts. The park is also home to ancient Kanheri Caves, adding historical significance to its natural beauty.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Sanjay Gandhi National Park can enjoy a plethora of activities such as hiking, cycling, and picnicking. The park features several trekking trails, including the popular Shilonda Trail and the Kanheri Caves Trail. Wildlife enthusiasts can indulge in birdwatching and spot diverse species of butterflies. The park also offers a mini train ride, the Van Rani, which provides a scenic tour of the area.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>Some of the notable attractions within Sanjay Gandhi National Park include the ancient Kanheri Caves, which date back to the 1st century BCE and feature intricate carvings and Buddhist sculptures. The Gandhi Tekdi is a memorial dedicated to Mahatma Gandhi and offers panoramic views of the park. The park also houses the Lion and Tiger Safari, providing visitors with a chance to see these majestic animals up close.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Sanjay Gandhi National Park:</h3>
+          <p>Sanjay Gandhi National Park is easily accessible from various parts of Mumbai. The nearest railway station is Borivali, which is a short distance from the park's main entrance. The park is well-connected by road, and visitors can reach it by public transportation, taxis, or private vehicles. The proximity to Mumbai makes it a convenient getaway for city dwellers and tourists alike.</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>Established in 1969, Sanjay Gandhi National Park is named after the late Indian politician Sanjay Gandhi. The park has a rich history, with the Kanheri Caves serving as an important Buddhist center from the 1st century BCE to the 10th century CE. The park's diverse ecosystems and archaeological treasures make it a significant cultural and natural heritage site.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Besides the attractions within the park, visitors can explore nearby sites such as the Global Vipassana Pagoda, a large meditation dome and monument dedicated to peace and harmony. The picturesque Aarey Milk Colony, known for its lush greenery and dairy farms, is also close by. Mumbai's iconic landmarks, such as the Gateway of India and Marine Drive, are easily accessible for those looking to explore more of the city's offerings.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>The region surrounding Sanjay Gandhi National Park reflects the vibrant and diverse culture of Mumbai. The local population includes a mix of various communities, each contributing to the city's unique cultural fabric. Visitors can experience the dynamic lifestyle, festivals, and culinary delights that Mumbai has to offer. The city's street food, ranging from vada pav to pav bhaji, is a must-try for anyone exploring the area.</p>
+        </div>
+        <div class="info">
+          <h3>Tips for Visitors:</h3>
+          <p>When visiting Sanjay Gandhi National Park, it's advisable to carry sufficient water, snacks, and sun protection. Wear comfortable footwear suitable for walking and hiking. Be mindful of the park's rules and regulations, and avoid littering to help preserve its natural beauty. Early morning or late afternoon visits are recommended for a more pleasant experience, especially during the hot summer months.</p>
+        </div>
+        <div class="info">
+            <h3>Location</h3>
+            <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.91279778024318, 19.221887667140688],  // Coordinates for Sanjay Gandhi National Park
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.91279778024318, 19.221887667140688])
+          .addTo(map);
+  </script>
+</body>
+</html>

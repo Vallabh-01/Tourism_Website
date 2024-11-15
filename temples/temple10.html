@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parli Vaijnath Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="parli-vaijnath-temple">
+    <div class="container">
+      <img src="parli.jpg" alt="Parli Vaijnath Temple Image" class="main-image">
+      <div class="content">
+        <h2>Parli Vaijnath Temple</h2>
+        <div class="info">
+          <h3>About Parli Vaijnath Temple:</h3>
+          <p>Parli Vaijnath Temple, located in Parli, Beed district, Maharashtra, is one of the twelve Jyotirlinga shrines dedicated to Lord Shiva. This temple is of great religious significance and is a major pilgrimage site for devotees of Lord Shiva.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The history of Parli Vaijnath Temple dates back to ancient times. It is believed that the temple was built by the Yadava dynasty and later renovated by the Peshwas. The temple's rich history is intertwined with various legends and myths associated with Lord Shiva and the Jyotirlingas.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The temple showcases classic Hemadpanthi architectural style with intricate carvings and sculptures adorning its structure. The main sanctum houses the sacred Jyotirlinga of Lord Shiva, which is revered by devotees. The temple complex also includes other shrines, a large courtyard, and facilities for pilgrims.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting Parli Vaijnath Temple can participate in various rituals and ceremonies conducted daily. Special poojas, abhishekams, and aarti are performed to honor Lord Shiva. The temple also celebrates major festivals like Maha Shivaratri and Shravan with grand festivities and religious fervor.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>While visiting Parli Vaijnath Temple, visitors can enjoy traditional Maharashtrian cuisine at local eateries. Popular dishes include bhakri, pithla, and puran poli. The nearby restaurants and food stalls offer a variety of vegetarian options that reflect the local culinary traditions.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Parli Vaijnath Temple, ranging from budget lodges to comfortable hotels. Many of these accommodations offer basic amenities and are located conveniently close to the temple, providing easy access for pilgrims.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Visitors to Parli Vaijnath Temple can also explore nearby attractions such as the Sant Janabai Temple and the Aundha Nagnath Temple, another Jyotirlinga shrine. The region is rich in historical and cultural sites, offering a comprehensive spiritual experience for travelers.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Parli Vaijnath Temple is located in Parli, Beed district, Maharashtra. The temple is well-connected by road and rail, making it accessible from major cities like Aurangabad and Pune. Pilgrims can reach Parli by state transport buses, trains, or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [76.5350437736928, 18.842354406953923],  // Coordinates for Parli Vaijnath Temple, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([76.5350437736928, 18.842354406953923])
+          .addTo(map);
+  </script>
+</body>
+</html> 

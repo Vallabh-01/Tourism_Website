@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velas Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="velas-beach">
+    <div class="container">
+      <img src="veles.jpeg" alt="Velas Beach Image" class="main-image">
+      <div class="content">
+        <h2>Velas Beach</h2>
+        <div class="info">
+          <h3>About Velas Beach:</h3>
+          <p>Velas Beach is a serene and secluded coastal destination situated in the Ratnagiri district of Maharashtra, India. Known for its pristine shoreline, scenic beauty, and tranquil atmosphere, Velas Beach offers visitors a peaceful retreat amidst nature.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Velas Beach is ideal for relaxation and leisure activities. Visitors can enjoy leisurely walks along the shoreline, sunbathe on the golden sands, and take in the breathtaking views of the Arabian Sea. The beach is also known for its turtle nesting sites, attracting nature enthusiasts and conservationists.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Velas Beach that visitors can explore. The Velas Turtle Conservation Center, located nearby, provides information about turtle conservation efforts and offers guided tours to witness turtle hatching during the nesting season. The historic Bankot Fort and Harihareshwar Temple are also worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Velas offers a taste of authentic Konkani cuisine. Visitors can savor delicious seafood dishes prepared with fresh catch from the Arabian Sea. From fish curry to prawn masala, there are plenty of culinary delights to explore at the beachside shacks and local eateries.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Velas Beach are limited and mostly comprise guesthouses and homestays. Visitors can experience warm hospitality and cozy accommodations in the nearby village. It's advisable to make reservations in advance, especially during the turtle nesting season.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Velas celebrates various festivals and cultural events throughout the year. The Velas Turtle Festival, held annually during the turtle nesting season, is a major attraction. Visitors can participate in turtle conservation activities, watch turtle hatchlings being released into the sea, and enjoy cultural performances.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Velas Beach is located in the Ratnagiri district of Maharashtra, approximately 220 kilometers from Mumbai. The beach is accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Velas Beach via public transportation such as buses or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.97518094419137, 18.201083998893154],  // Coordinates for Velas Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.97518094419137, 18.201083998893154])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

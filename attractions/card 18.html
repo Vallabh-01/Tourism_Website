@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sewagram Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="sewagram">
+    <div class="container">
+      <img src="sewagram.jpg" alt="Sewagram Image" class="main-image">
+      <div class="content">
+        <h2>Sewagram</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Sewagram is a small village located near Wardha in Maharashtra, India. It holds great historical significance as it was the residence of Mahatma Gandhi from 1936 to 1948. Gandhi established the Sewagram Ashram here, which became a center for various social and political activities during the Indian independence movement. The name "Sewagram" means "Village of Service," reflecting Gandhi's philosophy of self-reliance and community service.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Sewagram offers several attractions that provide insight into the life and work of Mahatma Gandhi:</p>
+          <ul>
+            <li><strong>Sewagram Ashram:</strong> The main attraction of Sewagram, the ashram includes several simple living quarters, including Bapu Kuti (Gandhi's residence), Adi Niwas, and other cottages where Gandhi and his followers lived and worked.</li>
+            <li><strong>Gandhi Memorial Museum:</strong> Located within the ashram complex, the museum displays various artifacts, photographs, and letters related to Gandhi's life and the Indian freedom struggle.</li>
+            <li><strong>Magan Sangrahalaya:</strong> A museum dedicated to rural industries and crafts, reflecting Gandhi's emphasis on self-sufficiency and village industries.</li>
+            <li><strong>Prayer Ground:</strong> An open area where Gandhi held his daily prayers and meetings, emphasizing the importance of spirituality in his life and work.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Sewagram can engage in various activities such as exploring the ashram, visiting the museums, and learning about Gandhi's philosophy and way of life. The serene and simple environment provides a glimpse into the life of one of the most influential leaders in Indian history.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Sewagram is from October to March when the weather is pleasant and suitable for exploring the outdoor attractions. The summer months (April to June) can be quite hot, while the monsoon season (July to September) brings moderate to heavy rainfall.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Sewagram is well-connected by road and rail. The nearest railway station is Wardha Junction, located about 8 kilometers from Sewagram. Wardha is well-connected to major cities like Nagpur, Mumbai, and Delhi by regular train services. The nearest airport is Dr. Babasaheb Ambedkar International Airport in Nagpur, approximately 75 kilometers away. Visitors can hire taxis or take buses from Wardha or Nagpur to reach Sewagram.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Sewagram offers basic accommodation options, including guesthouses and lodges. Visitors can also find hotels in nearby Wardha. It is advisable to book in advance, especially during peak tourist seasons and around significant dates related to Gandhi's life, such as Gandhi Jayanti (October 2nd).</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [78.66264864760865, 20.729102217850205],  // Coordinates for Sewagram, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([78.66264864760865, 20.729102217850205])
+          .addTo(map);
+  </script>
+</body>
+</html>

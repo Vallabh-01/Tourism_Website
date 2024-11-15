@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhudurg Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+        <div class="container">
+            <h1>Sindhudurg Fort</h1>
+            <img src="sindhudurg.jpeg" alt="Sindhudurg Fort">
+            <div class="info">
+                <h2>Famous For:</h2>
+                <p>Sindhudurg Fort is renowned for being a coastal fortification built by the Maratha ruler Shivaji Maharaj to defend against foreign invasions and protect the Konkan coast. The fort holds historical significance as it played a crucial role in maritime defense during the Maratha era.</p>
+            </div>
+            <div class="info">
+                <h2>Activities to Do:</h2>
+                <p>Visitors to Sindhudurg Fort can engage in activities such as exploring the fort's massive walls and bastions, learning about its history and architecture, enjoying scenic views of the Arabian Sea, and indulging in water sports like snorkeling and scuba diving in the surrounding waters.</p>
+            </div>
+            <div class="info">
+                <h2>Famous Places to Visit:</h2>
+                <p>Some of the notable attractions within Sindhudurg Fort include the Siddheshwar Temple dedicated to Lord Shiva, the Dilli Darwaja (main entrance), the Shivaji Maharaj statue, and the secret passage leading to the sea. Visitors can also explore the fort's watchtowers, cannons, and fortification structures.</p>
+            </div>
+            <div class="info">
+                <h2>How to Reach:</h2>
+                <p>Sindhudurg Fort is located on an island off the coast of Malvan in the Sindhudurg district of Maharashtra. The fort is accessible by boat from Malvan Jetty, which is the main embarkation point for visiting the fort. Visitors can hire private boats or join organized boat tours to reach the fort island.</p>
+            </div>
+            <div class="info">
+                <h2>Best Time to Visit:</h2>
+                <p>The best time to visit Sindhudurg Fort is during the winter months from October to February when the weather is pleasant and suitable for exploring outdoor attractions. Avoid visiting during the monsoon season (June to September) as rough seas and inclement weather may disrupt boat services to the fort.</p>
+            </div>
+            <div class="info">
+                <h2>Entry Fee:</h2>
+                <p>There is an entry fee to visit Sindhudurg Fort, which may vary for Indian and foreign tourists. Additionally, visitors may need to pay for boat rides to reach the fort island. It is advisable to check the current entry fee and boat charges before planning your visit.</p>
+            </div>
+            <div class="info">
+                <h2>Accommodation:</h2>
+                <p>While there are no accommodation options available within Sindhudurg Fort, visitors can find various hotels, resorts, and homestays in Malvan town. Malvan offers a range of accommodation options to suit different preferences and budgets, making it convenient for travelers to stay while exploring the fort and nearby attractions.</p>
+            </div>
+            <div class="info">
+                <h2>Location</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <!-- Mapbox JS -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [73.4597, 16.0421],
+                zoom: 15.1
+            });
+    
+            var marker = new mapboxgl.Marker()
+                .setLngLat([73.4597, 16.0421])
+                .addTo(map);
+        </script>
+    
+</body>
+</html>

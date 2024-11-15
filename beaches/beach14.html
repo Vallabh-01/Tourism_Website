@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harihareshwar Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="harihareshwar-beach">
+    <div class="container">
+      <img src="Harihareshwar.jpeg" alt="Harihareshwar Beach Image" class="main-image">
+      <div class="content">
+        <h2>Harihareshwar Beach</h2>
+        <div class="info">
+          <h3>About Harihareshwar Beach:</h3>
+          <p>Harihareshwar Beach is a serene and secluded beach located in the Raigad district of Maharashtra, India. Surrounded by lush greenery and gentle hills, Harihareshwar Beach is known for its tranquil atmosphere, golden sands, and clear waters, making it an ideal destination for relaxation and meditation.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Harihareshwar Beach offers a peaceful environment for visitors to unwind and rejuvenate. The beach is perfect for leisurely walks, meditation, and yoga practices. Visitors can also take boat rides to explore nearby attractions or enjoy thrilling water sports such as banana boat rides and parasailing.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Harihareshwar Beach that visitors can explore. The Harihareshwar Temple, dedicated to Lord Shiva, is a major pilgrimage site and a must-visit for religious devotees. The beautiful Diveagar Beach and the historic Bankot Fort are also worth exploring.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Harihareshwar offers a variety of local delicacies and seafood dishes. Visitors can enjoy fresh seafood meals at beachside shacks and local eateries, including fish thalis, prawn curry, and crab masala. The traditional Malvani cuisine is known for its rich flavors and aromatic spices.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Harihareshwar Beach include budget guesthouses, resorts, and cottages. Visitors can choose from beachfront properties offering stunning views of the Arabian Sea or cozy accommodations nestled amidst coconut groves and lush greenery.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Harihareshwar celebrates various festivals and cultural events throughout the year. The Shivaratri festival, dedicated to Lord Shiva, is celebrated with great fervor, featuring colorful processions, traditional music, and cultural performances.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Harihareshwar Beach is located in the Raigad district of Maharashtra, approximately 200 kilometers from Mumbai. The beach is accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Harihareshwar Beach via public transportation or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.01709733872072, 18.002600388045074],  // Coordinates for Harihareshwar Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.01709733872072, 18.002600388045074])
+          .addTo(map);
+  </script>
+</body>
+</html> 

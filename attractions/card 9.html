@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karnala Bird Sanctuary Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="karnala-bird-sanctuary">
+    <div class="container">
+      <img src="Karnala.jpeg" alt="Karnala Bird Sanctuary Image" class="main-image">
+      <div class="content">
+        <h2>Karnala Bird Sanctuary</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>Karnala Bird Sanctuary, located near Panvel in Maharashtra, India, is renowned for its avian diversity, making it a paradise for birdwatchers and nature enthusiasts. The sanctuary is home to a wide variety of bird species, including resident and migratory birds, amidst its lush greenery and scenic landscapes.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Karnala Bird Sanctuary can engage in activities such as birdwatching, nature walks, and photography. The sanctuary offers several trails, including the Karnala Fort Trail, which leads to the historic Karnala Fort, providing both adventure and historical exploration. Birdwatchers can spot species such as the Malabar Trogon, Magpie Robin, and Golden Oriole.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>Some of the notable attractions within Karnala Bird Sanctuary include the Karnala Fort, a hill fort dating back to the 12th century, offering panoramic views of the surrounding landscape. The sanctuary is also home to diverse flora, including rare plant species, adding to its ecological significance and appeal.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Karnala Bird Sanctuary:</h3>
+          <p>Karnala Bird Sanctuary is easily accessible from Mumbai and Pune. The nearest railway station is Panvel, from where taxis and buses are available to reach the sanctuary. By road, it is approximately a 2-hour drive from Mumbai and a 3-hour drive from Pune. The sanctuary's proximity to major cities makes it a convenient destination for a day trip or weekend getaway.</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>Originally established as a bird sanctuary in 1968, Karnala Bird Sanctuary derives its name from the nearby Karnala Fort. The sanctuary's location amidst the Western Ghats adds to its historical and ecological significance, preserving a unique ecosystem and providing a habitat for diverse wildlife.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Besides exploring Karnala Bird Sanctuary, visitors can also visit nearby attractions such as the Karnala Fort, known for its trekking trails and historical ruins. The sanctuary is located in close proximity to other natural destinations in the Western Ghats, offering opportunities for further exploration and adventure.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>The surrounding region reflects the cultural diversity of Maharashtra, with influences from various communities and traditions. Visitors can experience local cuisine, including traditional Maharashtrian dishes, and explore nearby villages to learn about the region's heritage and customs.</p>
+        </div>
+        <div class="info">
+          <h3>Tips for Visitors:</h3>
+          <p>When visiting Karnala Bird Sanctuary, it's recommended to carry binoculars, a camera, and comfortable walking shoes. Bring sufficient water and snacks, as facilities within the sanctuary may be limited. Respect the natural environment and follow designated trails to minimize disturbance to wildlife. Early mornings are ideal for birdwatching, as many species are active during this time.</p>
+        </div>
+        <div class="info">
+            <h3>Location</h3>
+            <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.11367390817226, 18.89361309870295],  // Coordinates for Karnala Bird Sanctuary
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.11367390817226, 18.89361309870295])
+          .addTo(map);
+  </script>
+</body>
+</html> 

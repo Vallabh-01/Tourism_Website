@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Public Sans", sans-serif;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e3e4e6 100%);
+    color: #333;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 20px;
+}
+#searchBar {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #5a6268;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+#searchBar input {
+    padding: 10px 10px 10px 10px; 
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px; 
+}
+
+#searchBar i {
+    position: absolute;
+    right: 10px; /* Adjust the position of the icon */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none; /* Ensure the icon doesn't block clicks to the input */
+    font-size: 10px;
+}
+
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    position: relative;
+}
+
+.navbar .nav-links a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    background: #007bff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #007bff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active + .nav-links {
+        display: flex;
+    }
+}
+
+/* Parallax Section Styles */
+.parallax {
+    height: 100vh;
+    background: url('abc.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+#container img {
+    width: 100px;
+    margin-bottom: 2px;
+    opacity: 0.9;
+}
+
+#container h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-out;
+}
+
+#container p {
+font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 80%;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding-top: 70px;
+}
+
+section.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+section.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#history {
+    height: 100vh;
+    background-image: url('Kailash temple.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white; /* Ensure text color contrasts with the background */
+    text-align: center; /* Center align the text */
+    padding: 20px; /* Add padding to ensure text doesn't touch edges */
+    
+}
+
+/* Card Container Styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 14px;
+    justify-content: center;
+}
+
+.card {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 320px;
+    background-color: #ECEFF1;
+    cursor: pointer;
+    width: 350px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.card:hover .card-title {
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Load More Button Styles */
+#loadMore {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#loadMore:hover {
+    background: #0056b3;
+}
+
+/* Back Button Styles */
+.back-button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.social-media a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a:hover {
+    color: #0056b3;
+}
+
+/* Additional CSS for the Book Tour and Tickets page */
+
+/* Header Styles */
+.main-header {
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.main-header .cta-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.main-header .cta-button:hover {
+    background: #0056b3;
+}
+
+/* Booking Form Section */
+.booking-form {
+    padding:28px 56px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.booking-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.booking-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.booking-form button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.booking-form button:hover {
+    background: #0056b3;
+}
+
+#message, #requests{
+    width: 100%;
+    height: 60px;
+}
+
+/* Events Section */
+.events {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+}
+
+.card .cta-button {
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.cta-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+footer .social-media {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+footer .social-media a {
+    color: #007bff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    color: #0056b3;
+}
+

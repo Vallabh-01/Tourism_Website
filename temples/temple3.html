@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhuleshwar Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="bhuleshwar-temple">
+    <div class="container">
+      <img src="Bhuleshwar.jpg" alt="Bhuleshwar Temple Image" class="main-image">
+      <div class="content">
+        <h2>Bhuleshwar Temple</h2>
+        <div class="info">
+          <h3>About Bhuleshwar Temple:</h3>
+          <p>Bhuleshwar Temple is an ancient Hindu temple dedicated to Lord Shiva, located on a hilltop near Pune, Maharashtra. The temple is renowned for its unique architecture, intricate carvings, and historical significance, attracting devotees and tourists from all over the country.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>Built in the 13th century, the Bhuleshwar Temple is believed to have been constructed during the Yadava dynasty. The temple has a fortified appearance, resembling a mosque, which was a strategic design to protect it from invaders. The temple's architecture features beautiful carvings of deities, mythological scenes, and intricate stonework.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The Bhuleshwar Temple is known for its unique architectural style, combining elements of both Hindu and Islamic architecture. The temple's exterior resembles a fort, while the interior houses intricately carved pillars, statues of deities, and a sanctum sanctorum dedicated to Lord Shiva. The temple also features sculptures of various Hindu gods and goddesses, depicting stories from Hindu mythology.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting the Bhuleshwar Temple engage in various rituals and prayers dedicated to Lord Shiva. The temple is especially crowded during the festival of Mahashivaratri, when devotees from far and wide come to offer their prayers and seek blessings. The serene and tranquil ambiance of the temple makes it an ideal place for meditation and spiritual contemplation.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Visitors to the Bhuleshwar Temple can enjoy traditional Maharashtrian cuisine at nearby eateries. Popular dishes include puran poli, vada pav, misal pav, and various types of bhakri (millet flatbread). Many local eateries also serve delicious vegetarian thalis, offering a variety of local delicacies.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are several accommodation options available near Bhuleshwar Temple, ranging from budget guesthouses to mid-range hotels. Visitors can also choose to stay in Pune, which offers a wider range of accommodation facilities, including luxury hotels and serviced apartments. Advance booking is recommended, especially during peak tourist seasons and festivals.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>In addition to visiting Bhuleshwar Temple, visitors can explore several nearby attractions. The historic Sinhagad Fort, offering panoramic views and trekking opportunities, is a popular destination. The Jejuri Temple, dedicated to Lord Khandoba, and the scenic Saswad region, known for its natural beauty, are also worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Bhuleshwar Temple is located near the village of Yawat, approximately 45 kilometers from Pune, Maharashtra. The temple is easily accessible by road, and visitors can reach it via private vehicles or state transport buses. The nearest railway station is Pune Junction, from where local transport can be availed to reach the temple.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [74.24135959315872, 18.436399948543535],  // Coordinates for Bhuleshwar Temple, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([74.24135959315872, 18.436399948543535])
+          .addTo(map);
+  </script>
+</body>
+</html> 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaniwar Wada Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="shaniwar-wada">
+    <div class="container">
+      <img src="Shaniwar Wada.jpeg" alt="Shaniwar Wada Image" class="main-image">
+      <div class="content">
+        <h2>Shaniwar Wada</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Shaniwar Wada is a historic fortification located in Pune, Maharashtra, India. Built in 1732, it served as the seat of the Peshwas of the Maratha Empire until 1818 when the Peshwas lost control to the British East India Company. Shaniwar Wada is a significant monument reflecting the rich Maratha culture and architectural prowess.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Shaniwar Wada offers several attractions for visitors:</p>
+          <ul>
+            <li><strong>Dilli Darwaza:</strong> The main gate of Shaniwar Wada, a grand entrance that exemplifies the architectural style of the Maratha era.</li>
+            <li><strong>Narasimha Darwaza:</strong> Another significant gate named after the Narasimha avatar of Lord Vishnu.</li>
+            <li><strong>Palace Fountain:</strong> A stunning fountain that once adorned the main courtyard of the palace.</li>
+            <li><strong>Garden:</strong> The well-maintained gardens provide a serene environment for visitors to relax and appreciate the historic ambiance.</li>
+            <li><strong>Light and Sound Show:</strong> An evening show that narrates the history of Shaniwar Wada, bringing the fort's past to life through lights and sounds.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Shaniwar Wada can engage in various activities such as exploring the fort's ruins, enjoying the gardens, and attending the light and sound show. Photography enthusiasts will find numerous opportunities to capture the historical essence of the fort.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Shaniwar Wada is from October to March when the weather is pleasant and suitable for exploring the fort and its surroundings. The summer months (April to June) can be quite hot, while the monsoon season (July to September) brings moderate to heavy rainfall.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Shaniwar Wada is well-connected by road and rail. The nearest railway station is Pune Junction, located about 3 kilometers away. Pune is well-connected to major cities like Mumbai, Delhi, and Bangalore by regular train services. The nearest airport is Pune International Airport, approximately 12 kilometers away. Visitors can hire taxis, use public transportation, or drive to reach Shaniwar Wada.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Pune offers a wide range of accommodation options, including hotels, guesthouses, and serviced apartments. Visitors can choose from various lodging options based on their preferences and budget. Advance booking is recommended, especially during peak tourist seasons and around significant local festivals.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.85538241021868, 18.51971488953072],  // Coordinates for Shaniwar Wada, Pune
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.85538241021868, 18.51971488953072])
+          .addTo(map);
+  </script>
+</body>
+</html> 

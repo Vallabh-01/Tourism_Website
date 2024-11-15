@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaas Plateau Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="kaas-plateau">
+    <div class="container">
+      <img src="Kaas plateau.jpeg" alt="Kaas Plateau Image" class="main-image">
+      <div class="content">
+        <h2>Kaas Plateau</h2>
+        <div class="info">
+          <h3>About Kaas Plateau:</h3>
+          <p>The Kaas Plateau, also known as the Kaas Pathar, is a UNESCO World Natural Heritage Site located in Satara, Maharashtra, India. It is renowned for its stunning array of wildflowers that bloom during the monsoon season, transforming the plateau into a vibrant carpet of colors. The plateau is home to numerous endemic and endangered plant species, making it a biodiversity hotspot and a popular destination for nature enthusiasts, photographers, and botanists.</p>
+        </div>
+        <div class="info">
+          <h3>Flora and Fauna:</h3>
+          <p>The Kaas Plateau is known for its rich biodiversity, with over 850 species of flowering plants, including orchids, carnivorous plants, and rare herbs. The unique microclimate and nutrient-rich soil of the plateau support the growth of a diverse range of flora, attracting a variety of insect species and birds. Some of the notable plant species found here include the Kaas Plateau Ceropegia, Smithia hirsuta, and Impatiens oppositifolia.</p>
+        </div>
+        <div class="info">
+          <h3>Visiting Information:</h3>
+          <p>The best time to visit the Kaas Plateau is from August to October when the monsoon rains trigger the blooming of wildflowers. The plateau is open to visitors during this period, with guided tours available to explore the area. It is advisable to wear comfortable clothing and footwear suitable for walking on uneven terrain. Visitors are encouraged to follow designated trails and avoid damaging the delicate ecosystem of the plateau.</p>
+          <p>Entry to the Kaas Plateau is regulated by the Forest Department, and visitors need to obtain permits before entering the area. Parking facilities and basic amenities are available near the entrance of the plateau. It is recommended to carry sufficient water and snacks as there are limited food options available nearby.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>The Kaas Plateau is located approximately 25 kilometers from Satara city in Maharashtra. The nearest airport is Pune Airport, which is around 130 kilometers away. Satara Railway Station is the nearest railhead, and regular bus services are available from Satara to the plateau. Visitors can also hire taxis or private vehicles to reach the plateau.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.82360654504944, 17.722685118842975],  // Coordinates for Kaas Plateau, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.82360654504944, 17.722685118842975])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

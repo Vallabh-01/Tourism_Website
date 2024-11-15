@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tadoba Andhari Tiger Reserve Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="tadoba-andhari-tiger-reserve">
+    <div class="container">
+      <img src="tiger.jpg" alt="Tadoba Andhari Tiger Reserve Image" class="main-image">
+      <div class="content">
+        <h2>Tadoba Andhari Tiger Reserve</h2>
+        <div class="info">
+          <h3>Famous For:</h3>
+          <p>Tadoba Andhari Tiger Reserve, located in the Chandrapur district of Maharashtra, is one of the oldest and largest national parks in the state. It is renowned for its significant population of Bengal tigers and diverse wildlife. The reserve is a haven for nature enthusiasts and wildlife photographers, offering excellent opportunities to observe tigers and other species in their natural habitat.</p>
+        </div>
+        <div class="info">
+          <h3>Activities to Do:</h3>
+          <p>Visitors to Tadoba Andhari Tiger Reserve can embark on thrilling jungle safaris, both in the early morning and late afternoon, to spot wildlife including tigers, leopards, sloth bears, and various bird species. The reserve also offers nature trails and birdwatching tours. Exploring the serene landscapes, dense forests, and beautiful lakes within the reserve adds to the experience.</p>
+        </div>
+        <div class="info">
+          <h3>Famous Places to Visit:</h3>
+          <p>In addition to the safari zones, notable attractions within Tadoba Andhari Tiger Reserve include the Tadoba Lake, which is a popular spot for birdwatching and relaxing by the water. The Moharli and Kolsa ranges are known for their diverse wildlife sightings. The Tadoba Interpretation Centre provides insightful information about the reserve's flora and fauna, enhancing the visitor experience.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach Tadoba Andhari Tiger Reserve:</h3>
+          <p>Tadoba Andhari Tiger Reserve is well-connected by road and can be easily reached from major cities in Maharashtra. The nearest airport is in Nagpur, approximately 140 kilometers away. The nearest railway station is in Chandrapur, around 45 kilometers from the reserve. Regular buses and taxis are available from these locations to the reserve.</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>Established in 1955, Tadoba Andhari Tiger Reserve is named after the local deity Tadoba and the Andhari River that flows through the reserve. It was declared a tiger reserve in 1995 under Project Tiger, aimed at protecting the Bengal tiger population. The reserve's history is deeply intertwined with conservation efforts and the preservation of wildlife in India.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Besides Tadoba Andhari Tiger Reserve, visitors can explore nearby attractions such as the Anandwan Ashram, founded by Baba Amte, which is a rehabilitation center for leprosy patients. The city of Chandrapur offers historical sites like the Chandrapur Fort and Mahakali Temple. The Navegaon National Park and Nagzira Wildlife Sanctuary are also within driving distance, providing more opportunities for wildlife exploration.</p>
+        </div>
+        <div class="info">
+          <h3>Local Culture:</h3>
+          <p>The region surrounding Tadoba Andhari Tiger Reserve reflects the rich cultural heritage of Maharashtra. The local culture is deeply rooted in tribal traditions and practices. Visitors can experience the warmth and hospitality of the local people, who are known for their devotion to nature and wildlife. The cuisine of Maharashtra, with its diverse flavors and dishes, can be savored in the local eateries. Festivals like Diwali, Ganesh Chaturthi, and Makar Sankranti are celebrated with great enthusiasm and offer a glimpse into the local customs and traditions.</p>
+        </div>
+        <div class="info">
+          <h3>Tips for Visitors:</h3>
+          <p>When visiting Tadoba Andhari Tiger Reserve, it's advisable to book safari tickets in advance, as they are limited and in high demand. Carry sufficient water, snacks, and insect repellent during the safari. Follow the guidelines provided by the park authorities and maintain silence to increase the chances of spotting wildlife. Respect the natural environment and avoid littering. Early morning and late afternoon safaris are recommended for the best wildlife sightings.</p>
+        </div>
+        <div class="info">
+            <h3>Location</h3>
+            <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [79.3846130143026, 20.282849522331862],  // Coordinates for Tadoba Andhari Tiger Reserve
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([79.3846130143026, 20.282849522331862])
+          .addTo(map);
+  </script>
+</body>
+</html>

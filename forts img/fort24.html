@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tung Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Tung Fort</h1>
+        <img src="tung.jpeg" alt="Tung Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Tung Fort, also known as Kathingad, is renowned for its strategic location, panoramic views, and historical significance in the Maratha era. It served as a military outpost and played a crucial role in defending the region.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Tung Fort can enjoy trekking and hiking through scenic trails surrounded by lush greenery. The fort's rugged terrain offers opportunities for adventure activities such as rock climbing and rappelling. Exploring the fort's historical structures, bastions, and temples is also a popular activity among tourists.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some of the notable attractions within Tung Fort include the Dilli Darwaja, the Kedareshwar Temple, and the statue of Chhatrapati Shivaji Maharaj. The fortifications, bastions, and cannons are also worth exploring. The fort offers panoramic views of the surrounding landscape and is an ideal spot for photography.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Tung Fort is located approximately 60 kilometers from Pune city in the Pune district of Maharashtra. Visitors can reach the base village of Tungwadi by road from Pune or Lonavala. From Tungwadi, a trekking trail leads to the fort, which takes about 1-2 hours to complete.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Tung Fort is during the post-monsoon season (October to February) when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the summer months (March to May) as the weather can be hot and humid. Trekking trails may become slippery during the monsoon season (June to September).</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no entry fee to visit Tung Fort. Visitors can explore the fort and its surroundings freely. However, it is essential to respect the historical structures and natural environment during the visit.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Since Tung Fort is located in a remote area, there are limited accommodation options available nearby. Visitors can opt for camping near the fort or stay in homestays and guesthouses in nearby villages like Tungwadi. It is advisable to carry camping gear and other essentials for an overnight stay.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.4622304039242, 18.66001925205931],
+            zoom: 14.7
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.4622304039242, 18.66001925205931])
+            .addTo(map);
+    </script>
+
+</body>
+</html>

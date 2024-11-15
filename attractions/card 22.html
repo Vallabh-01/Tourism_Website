@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalsubai Peak Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="kalsubai-peak">
+    <div class="container">
+      <img src="Kalsubai peak.jpeg" alt="Kalsubai Peak Image" class="main-image">
+      <div class="content">
+        <h2>Kalsubai Peak</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Kalsubai Peak, located in the Western Ghats of Maharashtra, is the highest peak in the state, standing at an elevation of 1,646 meters (5,400 feet) above sea level. It is a popular trekking destination known for its breathtaking views and challenging terrain. The peak is named after a local deity, Kalsubai, whose temple is situated at the summit.</p>
+        </div>
+        <div class="info">
+          <h3>Major Attractions:</h3>
+          <p>Kalsubai Peak offers several attractions for trekkers and nature enthusiasts:</p>
+          <ul>
+            <li><strong>Kalsubai Temple:</strong> The summit is adorned with a small temple dedicated to Goddess Kalsubai, which attracts pilgrims and trekkers alike.</li>
+            <li><strong>Scenic Views:</strong> On clear days, trekkers can enjoy panoramic views of the Sahyadri mountain range and surrounding valleys from the summit.</li>
+            <li><strong>Flora and Fauna:</strong> The trekking trail passes through diverse vegetation, including lush forests, grasslands, and rocky terrain, providing opportunities for wildlife sightings and birdwatching.</li>
+            <li><strong>Adventure:</strong> The trek to Kalsubai Peak offers a challenging yet rewarding experience for adventure enthusiasts, with steep ascents, rocky patches, and thrilling landscapes.</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Activities:</h3>
+          <p>Visitors to Kalsubai Peak can engage in various activities such as trekking, photography, birdwatching, and experiencing the local culture. The trek is suitable for both novice and experienced trekkers, although it requires physical fitness and stamina.</p>
+        </div>
+        <div class="info">
+          <h3>Best Time to Visit:</h3>
+          <p>The best time to visit Kalsubai Peak is during the cooler months of the year, from October to February, when the weather is pleasant and ideal for trekking. It is advisable to avoid the monsoon season (June to September) due to slippery trails and the risk of landslides.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Kalsubai Peak is located near the village of Bari in the Ahmednagar district of Maharashtra. The nearest major town is Igatpuri, which is well-connected by road and rail. From Igatpuri, visitors can hire local transport or taxis to reach Bari village, the base village for the trek to Kalsubai Peak.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>While there are no accommodation facilities at Kalsubai Peak itself, visitors can stay in nearby towns like Igatpuri or Bhandardara, which offer a range of hotels, guesthouses, and homestays. Camping is also a popular option for trekkers, with several camping sites available along the trekking route.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.70911662752886, 19.603222235089753],  // Coordinates for Kalsubai Peak, Maharashtra
+          zoom: 12
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.70911662752886, 19.603222235089753])
+          .addTo(map);
+  </script>
+</body>
+</html>

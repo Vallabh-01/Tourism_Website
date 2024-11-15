@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raigad Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="container">
+        <h1>Raigad Fort</h1>
+        <img src="Raigad.jpeg" alt="Raigad Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Raigad Fort is renowned for being the capital of the Maratha Empire. It holds historical significance as it was the stronghold of Chhatrapati Shivaji Maharaj and played a crucial role in Maratha history. The fort served as a strategic military outpost and administrative center for the Marathas.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Raigad Fort can engage in various activities such as trekking, exploring the historic ruins, enjoying panoramic views of the surrounding landscape, and experiencing the thrill of the Raigad Ropeway ride. Additionally, adventure enthusiasts can indulge in rappelling and rock climbing at certain sections of the fort.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Some of the notable attractions within Raigad Fort include the magnificent Samadhi (memorial) of Chhatrapati Shivaji Maharaj, the Takmak Tok cliff offering breathtaking views, and the Jagdishwar Temple known for its architectural beauty. The Maha Darwaja (main entrance), the throne room, and the Palkhi Darwaja are also worth exploring.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Raigad Fort is accessible by road from major cities like Mumbai and Pune. Visitors can also opt for the adventurous trekking route or take the Raigad Ropeway from the base to the fort. The nearest railway station is Veer Railway Station, located approximately 35 kilometers away. From there, local buses and taxis are available to reach the fort entrance.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Raigad Fort is during the winter months from October to February when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the monsoon season (June to September) as the trekking trails may become slippery and unsafe due to heavy rainfall.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is an entry fee to visit Raigad Fort, which may vary for Indian and foreign tourists. Additional charges may apply for ropeway rides and other activities within the fort premises. It is advisable to check the current entry fee and timings before planning your visit.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>While there are no accommodation options available within Raigad Fort, visitors can find various hotels, resorts, and guesthouses in nearby towns like Mahad and Mangaon. These towns offer a range of budget and luxury accommodation options to suit different preferences and budgets.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.4391, 18.2345],
+            zoom: 13.5
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.4391, 18.2345])
+            .addTo(map);
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kunkeshwar Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="kunkeshwar-beach">
+    <div class="container">
+      <img src="kunkeshwar.jpg" alt="Kunkeshwar Beach Image" class="main-image">
+      <div class="content">
+        <h2>Kunkeshwar Beach</h2>
+        <div class="info">
+          <h3>About Kunkeshwar Beach:</h3>
+          <p>Kunkeshwar Beach is a pristine beach located in the Sindhudurg district of Maharashtra, India. Known for its natural beauty, tranquil ambiance, and sacred significance, Kunkeshwar Beach is a popular destination for both tourists and pilgrims seeking serenity and relaxation.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Kunkeshwar Beach offers visitors the opportunity to relax amidst picturesque surroundings. The beach is ideal for swimming, sunbathing, and leisurely walks along the shoreline. Visitors can also explore the nearby Kunkeshwar Temple, dedicated to Lord Shiva, which is a major pilgrimage site.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Kunkeshwar Beach that visitors can explore. The Kunkeshwar Temple, located adjacent to the beach, is known for its architectural beauty and religious significance. The pristine Devgad Beach and the historic Vijaydurg Fort are also worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Kunkeshwar offers a variety of local delicacies and seafood dishes. Visitors can savor authentic Malvani cuisine at nearby eateries, including fresh seafood thalis, fish curries, and crab masala. The traditional Malvani flavors and spices add to the culinary experience.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Kunkeshwar Beach include budget guesthouses, resorts, and homestays. Visitors can choose from beachfront properties offering stunning views of the Arabian Sea or cozy accommodations nestled amidst coconut groves and palm trees.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Kunkeshwar celebrates various festivals and cultural events throughout the year. The Mahashivratri festival, dedicated to Lord Shiva, is celebrated with great fervor at the Kunkeshwar Temple. Visitors can witness colorful processions, traditional music, and cultural performances during this festival.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Kunkeshwar Beach is located in the Sindhudurg district of Maharashtra, approximately 480 kilometers from Mumbai. The beach is accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Kunkeshwar Beach via public transportation or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.393089584576, 16.33122399654852],  // Coordinates for Kunkeshwar Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.3930895845763, 16.33122399654852])
+          .addTo(map);
+  </script>
+</body>
+</html> 

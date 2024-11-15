@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vithal Mandir</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="vithal-mandir">
+    <div class="container">
+      <img src="vithal.jpg" alt="Vithal Mandir Image" class="main-image">
+      <div class="content">
+        <h2>Vithal Mandir</h2>
+        <div class="info">
+          <h3>About Vithal Mandir:</h3>
+          <p>Vithal Mandir, also known as Vitthal Rukmini Temple, is located in Pandharpur, Maharashtra. Dedicated to Lord Vitthal (a form of Lord Krishna) and his consort Rukmini, the temple is a significant pilgrimage site and attracts millions of devotees, especially during the Ashadhi Ekadashi festival.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The temple's origins are rooted in the 13th century during the reign of the Yadava dynasty. It has been an important center of the Varkari sect, which worships Vitthal as their supreme deity. Over the centuries, the temple has undergone several renovations and expansions.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Architecture:</h3>
+          <p>The Vithal Mandir exhibits a classic example of Maratha architecture with its towering spires and intricate carvings. The sanctum sanctorum houses the idol of Lord Vitthal, adorned with traditional ornaments. The temple complex also includes several smaller shrines dedicated to various deities.</p>
+        </div>
+        <div class="info">
+          <h3>Religious Significance:</h3>
+          <p>The temple is a focal point for the Varkari movement, which emphasizes devotion to Lord Vitthal and a simple, pious lifestyle. Pilgrims believe that visiting the temple and offering prayers can bring peace, prosperity, and spiritual enlightenment. The pilgrimage to Pandharpur during Ashadhi Ekadashi is particularly significant, with devotees walking long distances to reach the temple.</p>
+        </div>
+        <div class="info">
+          <h3>Festivals:</h3>
+          <p>The most important festival celebrated at Vithal Mandir is Ashadhi Ekadashi, which marks the onset of the monsoon and attracts over a million pilgrims. Other significant festivals include Kartiki Ekadashi, Maghi Ekadashi, and Ram Navami, each celebrated with elaborate rituals and processions.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Pandharpur offers a variety of traditional Maharashtrian cuisine for visitors. Pilgrims can enjoy local dishes such as puran poli, sabudana khichdi, and bhakri. Many eateries and food stalls near the temple serve delicious and affordable meals to devotees.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>There are numerous accommodation options available in Pandharpur, ranging from budget lodges to more comfortable hotels. Many dharamshalas (pilgrim rest houses) provide basic amenities for pilgrims. It is advisable to book accommodations in advance, especially during major festivals.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>Visitors to Vithal Mandir can also explore nearby attractions such as the ISKCON Temple, Kaikadi Maharaj Math, and Pundalik Temple. The Chandrabhaga River, which flows through Pandharpur, is considered sacred and is a popular spot for pilgrims to take a holy dip.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Vithal Mandir is located in Pandharpur, in the Solapur district of Maharashtra. The temple is well-connected by road and rail, with regular bus and train services from major cities like Mumbai, Pune, and Solapur. The nearest airport is in Pune, approximately 200 kilometers away.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [75.33541859653708, 17.677470136823114],  // Coordinates for Vithal Mandir, Pandharpur, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([75.33541859653708, 17.677470136823114])
+          .addTo(map);
+  </script>
+</body>
+</html> 

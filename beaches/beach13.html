@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrivardhan Beach</title>
+  <link rel="stylesheet" href="beach.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="shrivardhan-beach">
+    <div class="container">
+      <img src="shrivardhan.jpeg" alt="Shrivardhan Beach Image" class="main-image">
+      <div class="content">
+        <h2>Shrivardhan Beach</h2>
+        <div class="info">
+          <h3>About Shrivardhan Beach:</h3>
+          <p>Shrivardhan Beach is a picturesque beach located in the Raigad district of Maharashtra, India. Known for its pristine shoreline, tranquil atmosphere, and scenic beauty, Shrivardhan Beach is a popular destination for relaxation and water sports.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>Shrivardhan Beach offers a variety of attractions and activities for visitors. The beach is ideal for swimming, sunbathing, and beach volleyball. Visitors can also enjoy water sports such as parasailing, jet skiing, and banana boat rides.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>There are several attractions near Shrivardhan Beach that visitors can explore. The Harihareshwar Temple, located nearby, is a revered pilgrimage site dedicated to Lord Shiva. The Diveagar Beach and the beautiful Bankot Fort are also worth visiting.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Shrivardhan offers a variety of local delicacies and seafood dishes. Visitors can savor delicious Malvani cuisine at the beachside shacks and local eateries. From fresh seafood thalis to spicy curries, there's something for every palate.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Accommodation options near Shrivardhan Beach range from budget guesthouses to luxury resorts. Visitors can choose from beachfront properties offering stunning views of the Arabian Sea or cozy accommodations nestled amidst coconut groves.</p>
+        </div>
+        <div class="info">
+          <h3>Local Festivals:</h3>
+          <p>Shrivardhan celebrates various festivals and cultural events throughout the year. The Ganesh Chaturthi festival is a major event celebrated with great fervor, featuring colorful processions, traditional music, and cultural performances.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>Shrivardhan Beach is located in the Raigad district of Maharashtra, approximately 185 kilometers from Mumbai. The beach is accessible by road and is well-connected to major cities and towns in the region. Visitors can reach Shrivardhan Beach via public transportation or private vehicles.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [73.0109264317992, 18.043078667052818],  // Coordinates for Shrivardhan Beach, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([73.0109264317992, 18.043078667052818])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 

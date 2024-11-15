@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chhatrapati Shivaji Maharaj Terminus Information</title>
+  <link rel="stylesheet" href="card.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="csmt">
+    <div class="container">
+      <img src="cst.jpeg" alt="Chhatrapati Shivaji Maharaj Terminus Image" class="main-image">
+      <div class="content">
+        <h2>Chhatrapati Shivaji Maharaj Terminus</h2>
+        <div class="info">
+          <h3>About:</h3>
+          <p>Chhatrapati Shivaji Maharaj Terminus (CSMT), formerly known as Victoria Terminus, is a historic railway station and a UNESCO World Heritage Site located in Mumbai, Maharashtra, India. Designed by British architect Frederick William Stevens, the terminus is an architectural marvel that combines Victorian Gothic Revival and traditional Indian elements.</p>
+        </div>
+        <div class="info">
+          <h3>Historical Significance:</h3>
+          <p>Completed in 1887, CSMT stands as a testament to Mumbai's colonial past and its development as a major port city. The station was renamed in 1996 to honor Chhatrapati Shivaji Maharaj, the great Maratha warrior king. It remains one of the busiest railway stations in India, serving millions of passengers daily.</p>
+        </div>
+        <div class="info">
+          <h3>Architecture:</h3>
+          <p>The architectural grandeur of CSMT is characterized by its turrets, pointed arches, and grand domes. The station's façade features intricate carvings, stained glass windows, and ornamental ironwork. The blend of Gothic and Indian architectural styles makes it a unique and visually stunning landmark.</p>
+        </div>
+        <div class="info">
+          <h3>Attractions:</h3>
+          <p>CSMT is not only a transportation hub but also a popular tourist attraction. Visitors can admire its architectural beauty, explore the station's history at the Heritage Gallery, and enjoy the vibrant atmosphere. The illuminated station building at night is a sight to behold, showcasing its intricate details.</p>
+        </div>
+        <div class="info">
+          <h3>How to Reach:</h3>
+          <p>Chhatrapati Shivaji Maharaj Terminus is centrally located in Mumbai and is easily accessible by various modes of transportation. It is well-connected by local trains, buses, taxis, and auto-rickshaws. The station is a major hub for both long-distance and suburban trains, making it a convenient point of transit.</p>
+        </div>
+        <div class="info">
+          <h3>Nearby Attractions:</h3>
+          <p>CSMT's central location makes it a gateway to many other attractions in Mumbai. Nearby sites include the Gateway of India, Marine Drive, Crawford Market, and the bustling Colaba Causeway. Visitors can explore these iconic landmarks and experience the diverse culture of Mumbai.</p>
+        </div>
+        <div class="info">
+          <h3>Map:</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [72.8353042307796,18.940002056803127 ],  // Coordinates for CSMT, Mumbai
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([72.8353042307796,18.940002056803127 ])
+          .addTo(map);
+  </script>
+</body>
+</html> 

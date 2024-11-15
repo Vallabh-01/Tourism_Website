@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salher Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Salher Fort</h1>
+        <img src="Salher.jpeg" alt="Salher Fort">
+        <div class="info">
+            <h2>Famous For:</h2>
+            <p>Salher Fort is renowned for being the highest fort in Maharashtra and for its historical significance. It is famous for the Battle of Salher in 1672, where the Marathas defeated the Mughal army, marking a significant victory in Maratha history.</p>
+        </div>
+        <div class="info">
+            <h2>Activities to Do:</h2>
+            <p>Visitors to Salher Fort can engage in trekking, as it offers challenging and rewarding trails. The fort is a popular destination for adventure enthusiasts who enjoy hiking and exploring historical sites. Additionally, the fort provides opportunities for photography and nature walks, thanks to its stunning views and rich biodiversity.</p>
+        </div>
+        <div class="info">
+            <h2>Famous Places to Visit:</h2>
+            <p>Notable attractions within Salher Fort include the temples of Lord Shiva and Parshuram, the rock-cut water cisterns, and the remains of old structures. The fort's summit offers panoramic views of the surrounding Sahyadri mountain range and the nearby Salota Fort.</p>
+        </div>
+        <div class="info">
+            <h2>How to Reach:</h2>
+            <p>Salher Fort is located in the Nashik district of Maharashtra. It can be reached by road from Nashik city, which is well-connected by road and rail to major cities. The nearest railway station is Nashik Road Railway Station. From Nashik, one can hire a taxi or take a bus to reach the base village of Waghambe, from where the trek to the fort begins.</p>
+        </div>
+        <div class="info">
+            <h2>Best Time to Visit:</h2>
+            <p>The best time to visit Salher Fort is during the winter months from November to February when the weather is cool and ideal for trekking. The monsoon season (June to September) also offers a unique experience with lush greenery and waterfalls, but the trails can be slippery and challenging.</p>
+        </div>
+        <div class="info">
+            <h2>Entry Fee:</h2>
+            <p>There is no official entry fee to visit Salher Fort. It is accessible to the public without any charges. However, it is advisable to check for any recent updates or local regulations before planning your visit.</p>
+        </div>
+        <div class="info">
+            <h2>Accommodation:</h2>
+            <p>Accommodation options are limited near Salher Fort. Visitors can find basic lodging facilities in the nearby villages. For more comfortable accommodations, it is recommended to stay in Nashik, which offers a range of hotels and guesthouses to suit different budgets and preferences.</p>
+        </div>
+        <div class="info">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </div>
+    
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.9435993553787, 20.724618232389744],
+            zoom: 14
+        });
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat([73.9435993553787, 20.724618232389744])
+            .addTo(map);
+    </script>
+</body>
+</html>

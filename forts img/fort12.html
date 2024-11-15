@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikona Fort</title>
+    <link rel="stylesheet" href="fort.css">
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+<body>
+    
+        <div class="container">
+            <h1>Tikona Fort</h1>
+            <img src="Tikona.jpeg" alt="Tikona Fort">
+            <div class="info">
+                <h2>Famous For:</h2>
+                <p>Tikona Fort is famous for being a triangular-shaped hill fort located near Pune, Maharashtra. It holds historical significance as it was strategically important during various periods of Indian history, including the Maratha rule under the leadership of Chhatrapati Shivaji Maharaj.</p>
+            </div>
+            <div class="info">
+                <h2>Activities to Do:</h2>
+                <p>Visitors to Tikona Fort can engage in activities such as trekking, exploring the fort's ruins and bastions, and enjoying panoramic views of the surrounding landscape. The fort's location amidst lush greenery and scenic surroundings makes it an ideal destination for nature walks, photography, and relaxation.</p>
+            </div>
+            <div class="info">
+                <h2>Famous Places to Visit:</h2>
+                <p>Some of the notable attractions within Tikona Fort include the large stone entrance, the Trimbakeshwar Mahadev Temple, and the fort's ramparts offering scenic views of the Pawna Dam and surrounding hills. Visitors can also explore the fort's water tanks, caves, and remnants of ancient structures.</p>
+            </div>
+            <div class="info">
+                <h2>How to Reach:</h2>
+                <p>Tikona Fort is easily accessible by road from Pune and Mumbai. Visitors can reach the base village of Tikona Peth by private vehicle or public transport and then embark on a trek to reach the fort summit. The trekking trail is well-marked and relatively easy, suitable for beginners and experienced trekkers alike.</p>
+            </div>
+            <div class="info">
+                <h2>Best Time to Visit:</h2>
+                <p>The best time to visit Tikona Fort is during the post-monsoon months from September to February when the weather is pleasant and suitable for outdoor activities. Avoid visiting during the peak monsoon season (July to August) as the trekking trails may become slippery and challenging due to heavy rainfall.</p>
+            </div>
+            <div class="info">
+                <h2>Entry Fee:</h2>
+                <p>There is usually no entry fee to visit Tikona Fort. However, visitors may need to pay nominal charges for parking facilities at the base village or for guided treks organized by local tour operators. It is advisable to carry sufficient water, snacks, and other essentials for the trek.</p>
+            </div>
+            <div class="info">
+                <h2>Accommodation:</h2>
+                <p>While there are no accommodation options available at Tikona Fort, visitors can stay in nearby towns and villages such as Kamshet, Lonavala, or Pawna Lake. These areas offer a range of accommodation options including hotels, resorts, guesthouses, and homestays to suit different preferences and budgets.</p>
+            </div>
+            <div class="info">
+                <h2>Location</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <!-- Mapbox JS -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [73.51417, 18.63207],
+                zoom: 15.5
+            });
+    
+            var marker = new mapboxgl.Marker()
+                .setLngLat([73.51417, 18.63207])
+                .addTo(map);
+        </script>
+    
+</body>
+</html>

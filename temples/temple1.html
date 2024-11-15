@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Baba Temple</title>
+  <link rel="stylesheet" href="temples.css">
+  <style>
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+  </style>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <section id="sai-baba-temple">
+    <div class="container">
+      <img src="saibaba.jpg" alt="Sai Baba Temple Image" class="main-image">
+      <div class="content">
+        <h2>Sai Baba Temple</h2>
+        <div class="info">
+          <h3>About Sai Baba Temple:</h3>
+          <p>The Sai Baba Temple, located in Shirdi, Maharashtra, is a sacred pilgrimage site dedicated to the revered saint Sai Baba. Millions of devotees from around the world visit the temple to seek blessings, spiritual solace, and divine guidance. The temple complex embodies peace, devotion, and the teachings of Sai Baba.</p>
+        </div>
+        <div class="info">
+          <h3>History:</h3>
+          <p>The Sai Baba Temple was built over the samadhi (final resting place) of Sai Baba, who lived in Shirdi during the late 19th and early 20th centuries. Sai Baba, considered a saint and spiritual master, preached the importance of love, unity, and service to humanity. His teachings continue to inspire millions of followers.</p>
+        </div>
+        <div class="info">
+          <h3>Temple Complex:</h3>
+          <p>The Sai Baba Temple complex comprises the main shrine, where Sai Baba's samadhi is located, along with various other structures and facilities for devotees. The temple premises include prayer halls, meditation rooms, accommodation facilities, dining halls offering free meals (prasad), and gardens for peaceful contemplation.</p>
+        </div>
+        <div class="info">
+          <h3>Devotional Activities:</h3>
+          <p>Devotees visiting the Sai Baba Temple engage in various devotional activities, including darshan (viewing) of Sai Baba's idol and offering prayers and aarti (ritual worship). The temple conducts regular bhajans (devotional songs), kirtans (hymns), and spiritual discourses, fostering a spiritual atmosphere of reverence and devotion.</p>
+        </div>
+        <div class="info">
+          <h3>Local Cuisine:</h3>
+          <p>Shirdi offers a variety of local delicacies and vegetarian cuisine for devotees and visitors. The town is known for its simple yet delicious meals, including Maharashtrian thalis, puran poli (sweet flatbread), and traditional snacks like vada pav and sabudana khichdi. The Sai Prasadalaya within the temple complex provides free meals (prasad) to devotees.</p>
+        </div>
+        <div class="info">
+          <h3>Accommodation:</h3>
+          <p>Shirdi provides accommodation options ranging from budget hotels and lodges to luxury resorts and guesthouses. Many hotels offer convenient access to the Sai Baba Temple and other nearby attractions. Devotees can also stay in the temple's accommodation facilities, known as dharamshalas, for a spiritual retreat.</p>
+        </div>
+        <div class="info">
+          <h3>Location:</h3>
+          <p>The Sai Baba Temple is located in the town of Shirdi in the Ahmednagar district of Maharashtra, approximately 240 kilometers from Mumbai. Shirdi is well-connected by road and rail, with regular bus and train services from major cities in Maharashtra. The nearest airport is Aurangabad Airport, located about 130 kilometers away.</p>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidmFsbGFiaC0yazAxIiwiYSI6ImNsd3cyeGw0bDBycTIyanM3NW81NTZvaXkifQ.GWWurj8qKE83Y8IGvD4gOQ';
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [74.47557520736913, 19.7682286947098],  // Coordinates for Sai Baba Temple, Shirdi, Maharashtra
+          zoom: 14
+      });
+
+      var marker = new mapboxgl.Marker()
+          .setLngLat([74.47557520736913, 19.7682286947098])
+          .addTo(map);
+  </script>
+</body>
+</html>
+ 
